@@ -1,16 +1,31 @@
+@import url('landing-page.css');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 * {
     padding: 0;
     margin: 0;
   }
    
   body {
-    font-family: 'Poppins', sans-serif;
     background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-   
+
+  #mainContent{
+    padding: 12px;
+    gap: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1 {
+    font-weight: 800;
+    color: #4299A5; 
+  }
    
   /*
     AppBar
@@ -44,6 +59,10 @@
   .app-bar .app-bar__brand {
     display: flex;
     align-items: center;
+  }
+  
+  .app-bar .app-bar__brand a{
+    text-decoration: none;
   }
    
   .app-bar .app-bar__brand h1 {
@@ -89,6 +108,7 @@
     font-weight: normal;
   }
 
+  
   /*
   Footer
 */
