@@ -1,124 +1,124 @@
-@import url('landing-page.css');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('./landing-page.css');
+@import url('./tips.css');
+
 * {
-    padding: 0;
-    margin: 0;
-  }
-   
-  body {
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  #mainContent{
-    padding: 12px;
-    gap: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Manrope', sans-serif;
-  }
+body {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  h1 {
-    font-weight: 800;
-    color: #4299A5; 
-  }
-   
-  /*
+#mainContent {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+  color: #4299a5;
+}
+
+/*
     AppBar
   */
-   
-  .app-bar {
-    padding: 8px 16px;
-    background-color: white;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-   
-  .app-bar .app-bar__menu {
-    display: flex;
-    align-items: center;
-  }
-   
-  .app-bar .app-bar__menu button {
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    padding: 8px;
-    cursor: pointer;
-  }
-   
-  .app-bar .app-bar__brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  .app-bar .app-bar__brand a{
-    text-decoration: none;
-  }
-   
-  .app-bar .app-bar__brand h1 {
-    color: #4299A5;
-    font-size: 22px;
-    user-select: none;
-  }
-   
-  .app-bar .app-bar__navigation {
-    position: absolute;
-    top: 50px;
-    left: -180px;
-    width: 150px;
-    transition: all 0.3s;
-    padding: 8px;
-    background-color: white;
-    overflow: hidden;
-  }
-   
-  .app-bar .app-bar__navigation.open {
-    left: 0;
-  }
-   
-  .app-bar .app-bar__navigation ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    padding: 8px;
-    margin-bottom: 5px;
-    width: 100%;
-  }
-  main {
-    padding: 32px;
-    flex: 1;
-  }
-   
-  .content {
-    margin: 0 auto;
-    min-height: 100%;
-  }
-   
-  .content .content__heading {
-    font-weight: normal;
-  }
 
-  
-  /*
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand a {
+  text-decoration: none;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #4299a5;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/*
   Footer
 */
- 
+
 footer {
   padding: 16px;
 }
- 
+
 footer p {
   text-align: center;
   color: #aaaaaa;
 }
- 

@@ -1,8 +1,9 @@
 import 'regenerator-runtime';
-import '../styles/style.css';
-import '../styles/responsive.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import '../styles/style.css';
+import '../styles/responsive.css';
 import App from './views/app';
 
 const app = new App({
