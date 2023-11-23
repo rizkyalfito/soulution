@@ -1,0 +1,59 @@
+.jumbotron {
+    min-height: 60vh;
+  }
+
+  .jumbotron .row {
+    display: flex;
+    align-items: center;
+  }
+  .jumbotron .row h1{
+    font-weight: 800;
+    color: #4299A5;
+  }
+  .banner {
+    background-color: #4299A5;
+    color: #ffffff;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .banner .container {
+    z-index: 1;
+  }
+  .banner .row {
+    display: flex;
+    align-items: center;
+  }
+  .banner img {
+    width: 40vh;
+    border-radius: 8px; 
+    max-width: 100%; 
+  }
+
+  .route-banner {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .route-banner h3 {
+    color: #4299A5;
+    font-size: xx-large;
+  }
+
+  .route-banner .btn-primary{
+    width: 20%;
+    color: white;
+    background-color: #4299A5;
+    border: none; 
+    margin: 0 auto;
+  }
+  .route-banner .btn-primary:hover{
+    color: white;
+    background-color: #2f717a;
+  }
