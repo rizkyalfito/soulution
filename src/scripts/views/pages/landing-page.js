@@ -29,11 +29,11 @@ const LandingPage = {
     </div>
   </div>
 
-  <div class="route-banner">
+  <div class="route-banner col-md-6" >
     <div class="container">
     <div class="row">
-          <h3 class="display-4">Don't underestimate your mental problems. Check your mental health here</h3>
-          <a class="btn btn-primary btn-lg" href="#/home" role="button">Get Started</a>
+          <h3 class="display-4 col-md-6">Don't underestimate your mental problems. Check your mental health here</h3>
+          <a class="btn btn-primary btn-lg col-md-6" href="#/home" role="button">Get Started</a>
     </div>
   </div>
 
