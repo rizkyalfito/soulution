@@ -6,7 +6,7 @@ import ContactUs from '../views/pages/contact-us';
 import LandingPage from '../views/pages/landing-page';
 
 const routes = {
-  '/': Home, // default page
+  '/': LandingPage, // default page
   '/landing-page': LandingPage,
   '/home': Home,
   '/check': Check,
