@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Manrope', sans-serif;
 }
 
 #mainContent {
@@ -114,11 +115,13 @@ main {
   Footer
 */
 
-footer {
-  padding: 16px;
-}
-
-footer p {
-  text-align: center;
-  color: #aaaaaa;
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #4FC0D0;
+  width: 100%;
+  height: 20vh;
+  margin: 10px 0 0px 0;
 }
