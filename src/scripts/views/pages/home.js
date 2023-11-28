@@ -12,7 +12,7 @@ const Home = {
     </p>
   </div>
 
-  <h2 class="fs-3 px-5 pt-5">Tips Menghilangkan Stres Untuk <br> Jangka Waktu Yang Singkat</h2>
+  <h2 class="fs-3 px-5 pt-5">New Article</h2>
 
   <div id="shortTipsList"></div>
       `;
