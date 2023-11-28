@@ -14,7 +14,7 @@ const Home = {
 
   <h2 class="fs-3 px-5 pt-5">New Article</h2>
 
-  <div id="shortTipsList"></div>
+  <div id="ArticleList"></div>
       `;
   },
 
