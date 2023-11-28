@@ -1,7 +1,7 @@
 const Check = {
   async render() {
     return `
-          <h2>Check</h2>
+          <h2>Check, editing</h2>
         `;
   },
 
