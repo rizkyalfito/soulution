@@ -5,8 +5,8 @@ const LandingPage = {
     <div class="jumbotron">
     <div class="container ">
       <div class="row">
-        <div class="col-md-6">
-          <h1 class="display-4 ">Take Care of Your Mental Health</h1>
+        <div class="col-md-6 text-center">
+          <h1 class="display-4">Take Care of Your Mental Health</h1>
           <p class="lead">Soulution, Best Solution for Your Soul</p>
         </div>
         <div class="col-md-6">
@@ -19,10 +19,10 @@ const LandingPage = {
   <div class="banner">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <img src="./images/heros/hero.jpg" alt="Banner Image" class="img-fluid">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
           <h2 class="display-4">Mental health is important for you</h2>
         </div>
       </div>

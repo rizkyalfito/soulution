@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Manrope', sans-serif;
 }
 
 #mainContent {
@@ -35,7 +36,7 @@ h1 {
 
 .app-bar {
   padding: 8px 16px;
-  background-color: white;
+  background-color: black;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
@@ -115,11 +116,13 @@ main {
   Footer
 */
 
-footer {
-  padding: 16px;
-}
-
-footer p {
-  text-align: center;
-  color: #aaaaaa;
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #4FC0D0;
+  width: 100%;
+  height: 20vh;
+  margin: 10px 0 0px 0;
 }
