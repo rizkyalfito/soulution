@@ -2,6 +2,7 @@
 @import url('./landing-page.css');
 @import url('./tips.css');
 @import url('./home.css');
+@import url('./login-signup.css');
 
 * {
   padding: 0;
