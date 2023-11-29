@@ -36,7 +36,7 @@ const Tips = {
     const loadMoreShortTips = async () => {
       const tips = await tipsSource.ShortTips();
       const start = shortTipsContainer.children.length;
-      const end = start + 4;
+      const end = start + 2;
 
       tips.slice(start, end).forEach((tipsPendek) => {
         shortTipsContainer.innerHTML += tipsShortTemplate(tipsPendek);
@@ -50,7 +50,7 @@ const Tips = {
     const loadMoreLongTips = async () => {
       const tips = await tipsSource.LongTips();
       const start = longTipsContainer.children.length;
-      const end = start + 4;
+      const end = start + 2;
 
       tips.slice(start, end).forEach((tipsPanjang) => {
         longTipsContainer.innerHTML += tipsLongTemplate(tipsPanjang);
