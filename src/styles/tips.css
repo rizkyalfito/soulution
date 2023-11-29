@@ -71,3 +71,35 @@
   font-size: 20px;
   box-shadow: none;
 }
+
+/* detail tips */
+.detailTips-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.detailTips-container a {
+  width: 100%;
+}
+
+.detailTips-container h2 {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.detailTips-container img {
+  max-width: 550px;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detailTips-container p {
+  padding: 2rem 5rem 0 5rem;
+  text-align: justify;
+}

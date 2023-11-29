@@ -1,4 +1,4 @@
-import tipsSource from '../../../data/source-tips';
+import { tipsSource } from '../../../data/source-tips';
 import { tipsShortTemplate, tipsLongTemplate } from '../templates/tipsTemplate';
 
 const Tips = {
