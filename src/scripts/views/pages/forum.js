@@ -1,20 +1,16 @@
-import articleSource from '../../../data/source-article';
-import { articleItemTemplate } from '../templates/articleCardTemplate';
+import forumTemplate from '../templates/forumTemplate';
 
-const Home = {
+const Forum = {
   async render() {
     return `
-    <h2>forum</h2>
+    <div id="forum"></div>
       `;
   },
 
   async afterRender() {
-    const soulutionShortTips = await articleSource.article();
-    const ArticleContainer = document.querySelector('#ArticleList');
-    soulutionShortTips.forEach((articlePendek) => {
-      ArticleContainer.innerHTML += articleItemTemplate(articlePendek);
-    });
+    const forumContainer = document.querySelector('#forum');
+    forumContainer.innerHTML = forumTemplate();
   },
 };
 
-export default Home;
+export default Forum;
