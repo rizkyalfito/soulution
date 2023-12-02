@@ -11,9 +11,9 @@ const Home = {
       Mental Health
     </p>
   </div>
-
+  <div class="d-flex align-items-center justify-content-end w-100 px-5 new-article>
   <h2 class="fs-3 px-5 pt-5">New Article</h2>
-
+  </div>
   <div id="ArticleList"></div>
       `;
   },
