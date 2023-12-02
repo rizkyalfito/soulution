@@ -19,9 +19,9 @@ const Home = {
   },
 
   async afterRender() {
-    const soulutionShortTips = await articleSource.article();
+    const soulutionArticle = await articleSource.article();
     const ArticleContainer = document.querySelector('#ArticleList');
-    soulutionShortTips.forEach((articlePendek) => {
+    soulutionArticle.forEach((articlePendek) => {
       ArticleContainer.innerHTML += articleItemTemplate(articlePendek);
     });
 },
