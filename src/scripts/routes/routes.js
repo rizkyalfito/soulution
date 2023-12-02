@@ -5,9 +5,11 @@ import DetailTips from '../views/pages/detail-tips';
 import Forum from '../views/pages/forum';
 import ContactUs from '../views/pages/contact-us';
 import LandingPage from '../views/pages/landing-page';
+import Login from '../views/pages/login';
+import SignUp from '../views/pages/signup';
 
 const routes = {
-  '/': LandingPage, // default page
+  '/': Login, // default page
   '/landing-page': LandingPage,
   '/home': Home,
   '/check': Check,
@@ -15,6 +17,8 @@ const routes = {
   '/detail-tips/:id': DetailTips,
   '/forum': Forum,
   '/contact-us': ContactUs,
+  '/login': Login,
+  '/signup': SignUp,
 };
 
 export default routes;

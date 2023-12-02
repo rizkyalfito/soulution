@@ -45,6 +45,8 @@ h1 {
   top: 0;
   z-index: 99;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
 }
 
 .app-bar .app-bar__menu {
