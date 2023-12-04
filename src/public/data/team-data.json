@@ -1,0 +1,34 @@
+{
+    "team" : [
+        {
+            "avatar": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "nama": "Rizky Alfito Hadi",
+            "username": "@ikyalfito",
+            "instansi": "Universitas Singaperbangsa Karawang"
+        },
+        {
+            "avatar": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "nama": "Irsyadi Hanif Elnur",
+            "username": "@irsyadielnur",
+            "instansi": "Universitas Muhammadiyah Jakarta"
+        },
+        {
+            "avatar": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "nama": "Mirza Maulana",
+            "username": "@mrz_maulana",
+            "instansi": "Universitas Muhammadiyah Jakarta"
+        },
+        {
+            "avatar": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "nama": "Khamdan Budiarto",
+            "username": "@khamdan_boedi",
+            "instansi": "Universitas Muhammadiyah Jakarta"
+        },
+        {
+            "avatar": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "nama": "Muhammad Rizqi Septianto",
+            "username": "@qisepti",
+            "instansi": "Universitas Singaperbangsa Karawang"
+        }
+    ]
+}

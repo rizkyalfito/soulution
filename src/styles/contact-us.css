@@ -1,0 +1,99 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-hero-img{
+  object-fit: cover;
+}
+
+.contact-hero {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 0rem;
+    border-radius: 10px;
+    font-size: 64px;
+    padding: 5rem 0 0 5rem;
+    text-shadow: 0px 0px 2px #ffffff;
+  }
+  .contact-container h2 {
+    margin-top: 10vh;
+    width: 20%;
+    background-color: #4299a5;
+  }
+  
+  .content{
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+  }
+
+  .team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1vh;
+    text-align: center;
+}
+
+.team-item__header {
+    position: relative;
+}
+
+.team-item .team-item__header .team-item__header__poster {
+    width: 100%;
+}
+
+.team-item .team-item__header .team-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: #2D2424;
+    color: whitesmoke;
+}
+
+.team-item .team-item__content {
+    padding: 16px;
+}
+
+.team-item .team-item__content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.team-item .team-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.username{
+  color: #4299a5;
+}
+
+@media screen and (max-width: 452px) {
+  .team {
+      grid-template-columns: 1fr;
+  }
+}
