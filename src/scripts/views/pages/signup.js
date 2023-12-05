@@ -2,8 +2,6 @@ const SignUp = {
     async render() {
       return `
       <div class="login-container">
-     
-  
       <div class="input-container">
         <h2>WELCOME!</h2>
         <h3 class="text_login">Sign Up to your account</h3>
@@ -14,7 +12,7 @@ const SignUp = {
           <input type="username" class="input-label" placeholder="Username" />
           <button class="register-text" type ="submit">SIGN UP</button>
           <p> Have any account?
-            <a class="tombol-arah" href="SignUP.html">Log In</a>
+            <a class="tombol-arah" href="#/login">Log In</a>
             </p>
         </form>
       </div>

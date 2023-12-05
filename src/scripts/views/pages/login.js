@@ -13,7 +13,7 @@ const Login = {
           <input type="password" class="input-label" placeholder="Password" /> 
           <button class="register-text" type="submit">LOGIN</button>
           <p>Don't have any account?
-            <a class="tombol-arah" href="SignUP.html">Sign Up</a>
+            <a class="tombol-arah" href="#/Signup">Sign Up</a>
             </p>
         </form>
       </div>
