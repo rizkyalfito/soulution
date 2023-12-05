@@ -13,10 +13,10 @@ const Home = {
   </div>
   <div class = "new-section">
   <div class="d-flex align-items-center px-2 pl-5 new-article">
-  <h4 class="fs-4 px-4 pt-5  article-title">New Article</h4>
+  <h4 class="fs-4 px-4 pt-5  article-title"><b>New Article</b></h4>
   </div>
   <div class = more-option >
-  
+  <a href="./src/scripts/views/pages/detail-article.js" style="text-decoration: none;">More --></a>
   </div>
   </div>
   <div id="ArticleList"></div>

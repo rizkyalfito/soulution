@@ -17,7 +17,7 @@
   
   #ArticleList {
     width: 100%;
-    padding: 3rem 5rem 3rem 5rem;
+    padding: 1rem 5rem 3rem 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -58,6 +58,14 @@
   font-size: 100px;
   }
   .new-section{
-    padding-top: 10px;
-    padding-left: 50px;
+    padding: 2rem 0 0 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .more-option{
+    color: #070707;
+    align-items: end;
+    padding-right: 3rem;
+    font-size: 30px;
   }
