@@ -12,7 +12,7 @@ const ContactUs = {
       
       <h2 class="py-2 rounded-1 text-light text-center">Our Team</h2>
 
-      <div class="content d-flex justify-content-center">
+      <div class="content">
         <div id="team" class="team">
         </div>
       </div>
