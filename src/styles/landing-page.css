@@ -1,14 +1,13 @@
 #landing-page{
   padding: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: 'Manrope', sans-serif;
 }
 
 .jumbotron {
     min-height: 60vh;
+    display: flex;
+    background-color: #ffffff;
   }
 
   .jumbotron .row {
@@ -28,7 +27,7 @@
     padding: 20px;
     width: 90%;
     border-radius: 10px;
-    margin: 10vh;
+    margin: 5vh;
   }
   .banner .container {
     z-index: 1;
@@ -56,14 +55,14 @@
     font-size: xx-large;
   }
 
-  .route-banner .btn-primary{
-    width: 20%;
+  .jumbotron .btn-primary{
+    width: 50%;
     color: white;
     background-color: #4299A5;
     border: none; 
     margin: 0 auto;
   }
-  .route-banner .btn-primary:hover{
+  .jumbotron .btn-primary:hover{
     color: white;
     background-color: #2f717a;
   }
@@ -77,6 +76,13 @@
     }
     .route-banner .btn-primary{
       width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .banner .row{
+      justify-items: center;
+      justify-content: center;
     }
   }
   
