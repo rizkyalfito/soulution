@@ -1,6 +1,6 @@
 const SignUp = {
-    async render() {
-      return `
+  async render() {
+    return `
       <div class="login-container">
      
   
@@ -24,12 +24,11 @@ const SignUp = {
 
     </div>
           `;
-    },
-  
-    async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default SignUp;
-  
+  },
+
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default SignUp;
