@@ -1,7 +1,9 @@
 const Login = {
-  async render() {
-    return `
+    async render() {
+      return `
       <div class="login-container">
+     
+  
       <div class="input-container">
         <h2>WELCOME!</h2>
         <h3 class="text_login">Log In to your account</h3>
@@ -18,13 +20,16 @@ const Login = {
       <div class="container_img">
       <img src="./images/heros/login.jpg"class="gambar"width="500px"height="450px"alt="LogIn"/>
       </div>
-    </div>  
+
+    </div>
+      
           `;
-  },
-
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-  },
-};
-
-export default Login;
+    },
+  
+    async afterRender() {
+      // Fungsi ini akan dipanggil setelah render()
+    },
+  };
+  
+  export default Login;
+  
