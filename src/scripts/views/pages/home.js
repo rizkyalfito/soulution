@@ -11,8 +11,13 @@ const Home = {
       Mental Health
     </p>
   </div>
+  <div class = "new-section">
   <div class="d-flex align-items-center px-2 pl-5 new-article">
   <h4 class="fs-4 px-4 pt-5  article-title">New Article</h4>
+  </div>
+  <div class = more-option >
+  
+  </div>
   </div>
   <div id="ArticleList"></div>
       `;
