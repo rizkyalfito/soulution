@@ -1,3 +1,4 @@
+/* eslint-disable no-promise-executor-return */
 /* eslint-disable no-alert */
 import axios from 'axios';
 
@@ -23,7 +24,11 @@ const SignUp = {
             <input id="email" type="email" class="input-label" placeholder="Email" />
             <input id="password" type="password" class="input-label" placeholder="Password" /> 
             <input id="username" type="text" class="input-label" placeholder="Username" />
-            <button class="register-text" type="submit">SIGN UP</button>
+            <button id="signup-btn"class="register-text" type="submit">SIGN UP</button>
+            <div id="loading-indicator" class="loader" style="display: none;">
+                          <span class="loader-text">loading</span>
+                          <span class="load"></span>
+                        </div>
             <p> Have any account?
               <a class="tombol-arah" href="#/login">Log In</a>
             </p>
@@ -38,6 +43,8 @@ const SignUp = {
   
   async afterRender() {
     const signupForm = document.getElementById('signup-form');
+    const singupButton = document.getElementById('signup-btn');
+    const loadingIndicator = document.getElementById('loading-indicator');
 
     signupForm.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -45,6 +52,9 @@ const SignUp = {
       const emailInput = document.getElementById('email');
       const passwordInput = document.getElementById('password');
       const usernameInput = document.getElementById('username');
+
+      singupButton.style.display = 'none';
+      loadingIndicator.style.display = 'block';
 
       // Validasi sederhana
       if (!emailInput.value || !passwordInput.value || !usernameInput.value) {
@@ -59,12 +69,16 @@ const SignUp = {
           username: usernameInput.value,
         }, { withCredentials: true });
 
+        
+        // Simulasikan delay 2 detik (2000 milidetik)
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
         if (response.data.message === 'Signup successful') {
-          alert('Signup successful');
+          alert('Signup successful, log in to continue.');
           window.location.hash = '#/login';
         } else {
           console.error('Signup failed');
-          alert('Signup failed. Please try again.');
+          alert('Signup failed. Please check again.');
         }
       } catch (error) {
         console.error('Error during signup', error);
@@ -74,7 +88,10 @@ const SignUp = {
         } else {
           alert('Error during signup. Please try again later.');
         }
-      }
+      } finally {
+        singupButton.style.display = 'block';
+        loadingIndicator.style.display = 'none';
+    }
     });
     checkSession();
   },
