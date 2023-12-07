@@ -30,12 +30,11 @@
     padding: 1.5rem;
   }
   
-  .tips-card img {
+  .article-card img {
     width: 100%;
     height: 350px;
     object-fit: cover;
     border-radius: 5px;
-    filter: blur(1px);
   }
   
   .tips-info {
