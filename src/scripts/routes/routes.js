@@ -7,6 +7,7 @@ import ContactUs from '../views/pages/contact-us';
 import LandingPage from '../views/pages/landing-page';
 import Login from '../views/pages/login';
 import SignUp from '../views/pages/signup';
+import DetailArticle from '../views/pages/detail-article';
 
 const routes = {
   '/': Login, // default page
@@ -19,6 +20,7 @@ const routes = {
   '/contact-us': ContactUs,
   '/login': Login,
   '/signup': SignUp,
+  'detail-article': DetailArticle,
 };
 
 export default routes;
