@@ -121,7 +121,7 @@
     }
   }
 
-  /*responsive biar ga dempet samping*/
+  /*responsive biar ga dempet samping nya*/
   @media screen and (min-width: 768px) {
     .feature .row {
       display: flex;
