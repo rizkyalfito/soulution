@@ -107,6 +107,9 @@ h1 {
   margin-bottom: 5px;
   width: 100%;
 }
+.app-bar .app-bar__navigation ul li {
+  list-style-type: none;
+}
 main {
   padding: 32px;
   flex: 1;

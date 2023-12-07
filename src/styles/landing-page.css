@@ -36,13 +36,15 @@
   }
 
   .card {
-    width: 100%; 
-    max-width: 15rem; 
+    /*width: 100%;*/ 
+    max-width: 20rem; 
     margin: 0 auto; 
   }
 
   .card img {
-    width: 250px;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 
   .banner .container {
@@ -119,5 +121,20 @@
     }
   }
 
+  /*responsive biar ga dempet samping*/
+  @media screen and (min-width: 768px) {
+    .feature .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .feature .col-md-4 {
+      margin-bottom: 0;
+    }
+  }
+  
+  
 
   
