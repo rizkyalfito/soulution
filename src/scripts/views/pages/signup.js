@@ -1,6 +1,17 @@
 /* eslint-disable no-alert */
 import axios from 'axios';
 
+const checkSession = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+    console.log(response.data);
+
+    // Lakukan sesuatu berdasarkan respons sesi di sini
+  } catch (error) {
+    console.error('Error checking session', error);
+  }
+};
+
 const SignUp = {
   async render() {
     return `
@@ -29,43 +40,44 @@ const SignUp = {
     const signupForm = document.getElementById('signup-form');
 
     signupForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
+      event.preventDefault();
 
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const usernameInput = document.getElementById('username');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const usernameInput = document.getElementById('username');
 
-        // Validasi sederhana
-        if (!emailInput.value || !passwordInput.value || !usernameInput.value) {
-            alert('Email, password, and username are required');
-            return;
+      // Validasi sederhana
+      if (!emailInput.value || !passwordInput.value || !usernameInput.value) {
+        alert('Email, password, and username are required');
+        return;
+      }
+
+      try {
+        const response = await axios.post('http://localhost:3000/api/auth/signup', {
+          email: emailInput.value,
+          password: passwordInput.value,
+          username: usernameInput.value,
+        }, { withCredentials: true });
+
+        if (response.data.message === 'Signup successful') {
+          alert('Signup successful');
+          window.location.hash = '#/login';
+        } else {
+          console.error('Signup failed');
+          alert('Signup failed. Please try again.');
         }
+      } catch (error) {
+        console.error('Error during signup', error);
 
-        try {
-            const response = await axios.post('http://localhost:3000/api/auth/signup', {
-                email: emailInput.value,
-                password: passwordInput.value,
-                username: usernameInput.value,
-            });
-
-            if (response.data.message === 'Signup successful') {
-                alert('Signup successful');
-                window.location.hash = '#/login';
-            } else {
-                console.error('Signup failed');
-                alert('Signup failed. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error during signup', error);
-
-            if (error.response && error.response.status === 400) {
-                alert('Email is already in use. Please use a different email.');
-            } else {
-                alert('Error during signup. Please try again later.');
-            }
+        if (error.response && error.response.status === 400) {
+          alert('Email is already in use. Please use a different email.');
+        } else {
+          alert('Error during signup. Please try again later.');
         }
+      }
     });
-},
+    checkSession();
+  },
 };
 
 export default SignUp;
