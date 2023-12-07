@@ -5,6 +5,7 @@
 @import url('./tips.css');
 @import url('./login-signup.css');
 @import url('./contact-us.css');
+@import url('./check.css');
 
 * {
   padding: 0;

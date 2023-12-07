@@ -1,0 +1,19 @@
+.hero{
+    position: relative;
+}
+.banner-hero{
+    object-fit: cover;
+    height: 350px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.para1{
+    text-align: center;
+}
+.para2{
+    text-align: justify;
+}
