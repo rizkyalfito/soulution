@@ -27,8 +27,26 @@
     padding: 20px;
     width: 90%;
     border-radius: 10px;
-    margin: 5vh;
+    margin: 5vh auto;
   }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    /*width: 100%;*/ 
+    max-width: 20rem; 
+    margin: 0 auto; 
+  }
+
+  .card img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
   .banner .container {
     z-index: 1;
   }
@@ -48,11 +66,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
   }
 
   .route-banner h3 {
     color: #4299A5;
-    font-size: xx-large;
+    font-size: 1.5em;
   }
 
   .jumbotron .btn-primary{
@@ -79,10 +98,43 @@
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 769px) {
     .banner .row{
-      justify-items: center;
-      justify-content: center;
+      /*justify-items: center;
+      justify-content: center;*/
+      flex-direction: column;
+      text-align: center;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .feature .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .feature .col-md-4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /*responsive biar ga dempet samping nya, tapi belum fix*/
+  @media screen and (min-width: 768px) {
+    .feature .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .feature .col-md-4 {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+
   
