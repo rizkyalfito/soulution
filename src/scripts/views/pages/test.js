@@ -1,7 +1,7 @@
 const Test = {
     async render() {
       return `
-  <div class="up-content">
+  <div class=" w-100 rounded up-content">
       <p><b>Complete the following questions according to your situation<br /> <br />
       In the LAST MONTH, how often have you: </b></p>
   </div>
