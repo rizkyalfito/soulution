@@ -30,15 +30,18 @@
     padding: 1.5rem;
   }
   
-  .tips-card img {
+  .article-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
     border-radius: 5px;
   }
   
-  .tips-info {
+  .article-info {
     padding: 1rem 1rem 0 1rem;
   }
   
-  .tips-info p {
+  .article-info p {
     height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;

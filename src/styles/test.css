@@ -1,0 +1,10 @@
+.up-content{
+    height: 200px;
+    background-color: #4299A5;
+    text-align: center;
+}
+.up-content p{
+    padding-top: 2rem;
+    color: white;
+
+}
