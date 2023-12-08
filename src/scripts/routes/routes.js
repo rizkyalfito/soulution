@@ -11,7 +11,7 @@ import DetailArticle from '../views/pages/detail-article';
 import Test from '../views/pages/test';
 
 const routes = {
-  '/': Login, // default page
+  '/': LandingPage, // default page
   '/landing-page': LandingPage,
   '/home': Home,
   '/check': Check,
