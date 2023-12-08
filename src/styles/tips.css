@@ -58,18 +58,16 @@
 .load-more button {
   width: 200px;
   height: 45px;
-  background-color: #4299a5;
+  color: white;
+  background-color: #4299A5;
   border-radius: 10px;
   border: none;
-  color: #f5f5f5;
   font-weight: 600;
-  box-shadow: 0px 0px 3px #1b4146;
 }
 
 .load-more button:hover {
-  font-weight: bolder;
-  font-size: 20px;
-  box-shadow: none;
+  color: white;
+    background-color: #2f717a;
 }
 
 /* detail tips */

@@ -8,7 +8,7 @@ const LandingPage = {
         <div class="col-md-6 text-center align-self-center">
           <h1 class="display-4">Take Care of Your Mental Health</h1>
           <p class="lead">Soulution, Best Solution for Your Soul</p>
-          <a class="btn btn-primary btn-lg" href="#/home" role="button">Get Started</a>
+          <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
         </div>
         <div class="col-md-6">
           <img src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid">

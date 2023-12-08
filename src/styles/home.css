@@ -26,8 +26,8 @@
   .article-card {
     background-color: #f5f5f5;
     border: 1px solid #4fc0d0;
-    border-radius: 10px;
-    padding: 1.5rem;
+    border-radius: 21px;
+    padding: 1rem;
   }
   
   .article-card img {
@@ -35,6 +35,11 @@
     height: 350px;
     object-fit: cover;
     border-radius: 5px;
+    filter: blur(1px);
+}
+
+  .article-card img:hover {
+    filter: blur(0);
   }
   
   .article-info {
