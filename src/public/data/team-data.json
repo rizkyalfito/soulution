@@ -1,31 +1,31 @@
 {
     "team" : [
         {
-            "avatar": "./images/contacts/ava1.jpeg",
+            "avatar": "./images/contacts/tim-1.jpg",
             "nama": "Rizky Alfito Hadi",
             "username": "@ikyalfito",
             "instansi": "Universitas Singaperbangsa Karawang"
         },
         {
-            "avatar": "./images/contacts/ava2.jpeg",
+            "avatar": "./images/contacts/tim-2.jpg",
             "nama": "Irsyadi Hanif Elnur",
             "username": "@irsyadielnur",
             "instansi": "Universitas Muhammadiyah Jakarta"
         },
         {
-            "avatar": "./images/contacts/ava3.jpeg",
+            "avatar": "./images/contacts/tim-3.jpg",
             "nama": "Mirza Maulana",
             "username": "@mrz_maulana",
             "instansi": "Universitas Muhammadiyah Jakarta"
         },
         {
-            "avatar": "./images/contacts/ava4.jpeg",
+            "avatar": "./images/contacts/tim-4.jpg",
             "nama": "Khamdan Budiarto",
             "username": "@khamdan_boedi",
             "instansi": "Universitas Muhammadiyah Jakarta"
         },
         {
-            "avatar": "./images/contacts/ava5.jpeg",
+            "avatar": "./images/contacts/tim-5.jpg",
             "nama": "Muhammad Rizqi S",
             "username": "@qisepti",
             "instansi": "Universitas Singaperbangsa Karawang"
