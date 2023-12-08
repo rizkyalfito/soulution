@@ -37,11 +37,11 @@
     border-radius: 5px;
   }
   
-  .tips-info {
+  .article-info {
     padding: 1rem 1rem 0 1rem;
   }
   
-  .tips-info p {
+  .article-info p {
     height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
