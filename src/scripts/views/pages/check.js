@@ -39,7 +39,7 @@ const Check = {
 
 <div class="w-80 bottom-content">
     <p><b>Ready to check out? Click the button below to get started. It should only take you 5 - 10 minutes to complete.</b></p>
-    <a class="btn btn-second btn-lg" href="#/home" role="button">Get Started --></a>
+    <a class="btn btn-second btn-lg" href="#/test" role="button">Get Started --></a>
 </div>
         `;
   },

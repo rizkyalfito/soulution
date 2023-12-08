@@ -6,6 +6,7 @@
 @import url('./login-signup.css');
 @import url('./contact-us.css');
 @import url('./check.css');
+@import url('./test.css');
 
 * {
   padding: 0;
