@@ -63,6 +63,7 @@
     height: 39vh;
     object-fit: cover;
     border-radius: 10px;
+    
   }
 .team-item__header {
     position: relative;
@@ -111,6 +112,11 @@
 @media screen and (max-width: 425px) {
   .team-item {
     width: 100%; 
+    height: auto;
+  }
+
+  .team-item img {
+    width: 80%; 
     height: auto;
   }
 
