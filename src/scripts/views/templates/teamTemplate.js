@@ -6,7 +6,8 @@ const teamTemplate = (team) =>`
     </div>
     <div class="team-item__content" >
       <h3 tabindex="0">${team.nama}</h3>
-      <h6 tabindex="0" class="username">${team.username}</h6>
+      <h6 tabindex="0" class="username">
+        <a href=${team.urlprofile} target="_blank">${team.username}</a></h6>
       <p tabindex="0">${team.instansi}</p>
     </div>
   </div>
