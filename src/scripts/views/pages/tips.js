@@ -27,7 +27,7 @@ const Tips = {
           <button id="loadLongTips" type="submit">Load More</button>
         </div>
 
-        <h2 class="fs-3 px-5 pt-5 fw-bold">Temukan Artikel Berkaitan Dengan Kesehatan Mental</h2>
+        <h2 class="fs-3 px-5 pt-5 fw-bold">Temukan Artikel Yang Berkaitan Dengan Kesehatan Mental Anda</h2>
 
         <div id="ArticleList"></div>
         <div class="d-flex align-items-center justify-content-end w-100 px-5 load-more">
