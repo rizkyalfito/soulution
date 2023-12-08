@@ -5,6 +5,8 @@ const Test = {
       <p><b>Complete the following questions according to your situation<br /> <br />
       In the LAST MONTH, how often have you: </b></p>
   </div>
+  <div class="question" >
+  </div>
           `;
     },
   
