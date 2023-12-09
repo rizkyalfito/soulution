@@ -60,18 +60,9 @@
     max-width: 100%; 
   }
 
-  .route-banner {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .route-banner h3 {
+  .jumbotron .lead2 {
     color: #4299A5;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .jumbotron .btn-primary{
@@ -80,12 +71,74 @@
     background-color: #4299A5;
     border: none; 
     margin: 0 auto;
+    margin-bottom: 4rem;
+    
   }
   .jumbotron .btn-primary:hover{
     color: white;
     background-color: #2f717a;
   }
 
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cssbuttons-io-button {
+    background: #4299A5;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0.5em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+
+
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.3em;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #2f717a;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
   @media screen and (max-width: 425px) {
     h2.display-4 {
       font-size: 1.3em;
@@ -95,6 +148,7 @@
     }
     .route-banner .btn-primary{
       width: 80%;
+      
     }
   }
   
