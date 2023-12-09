@@ -7,7 +7,8 @@ const LandingPage = {
       <div class="row">
         <div class="col-md-6 text-center align-self-center">
           <h1 class="display-4">Take Care of Your Mental Health</h1>
-
+          <p class="lead">-- Soulution, Best Solution for Your Soul --</p>
+          <p class="lead2">Don't underestimate your mental problems. Check your mental health here</p>
           <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
         </div>
         <div class="col-md-6">
