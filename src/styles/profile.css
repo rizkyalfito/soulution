@@ -1,0 +1,104 @@
+#mycard {
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 647px;
+    min-height: 276px;
+    border-radius: 10px;
+    border-color: #4299A5;
+    border-radius: 10px;
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.10), 0px 41px 41px 0px rgba(0, 0, 0, 0.09), 0px 92px 55px 0px rgba(0, 0, 0, 0.05), 0px 164px 65px 0px rgba(0, 0, 0, 0.01), 0px 256px 72px 0px rgba(0, 0, 0, 0.00);
+}
+
+#editForm {
+    margin-top: 20px;
+    padding: 20px;
+    min-width: 558px;
+    min-height: 52px;
+    
+}
+
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #4299A5;
+  
+}
+
+button {
+    background-color:#4299A5;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 147px;
+    height: 43px;
+}
+
+#username-profile{
+    color: #4299A5;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #4299A5;
+}
+
+.tombol-logout {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 650px;
+    height: 41px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto; /* Membuat margin kiri otomatis sehingga tombol berada di tengah */
+    margin-right: auto; /* Membuat margin kanan otomatis sehingga tombol berada di tengah */
+}
+
+/* Media Query untuk Ponsel */
+@media only screen and (max-width: 600px) {
+    #mycard {
+        min-width: auto;
+    }
+
+    #editForm {
+        min-width: auto;
+    }
+
+    .tombol-logout {
+        width: 100%;
+    }
+}
+
+/* Media Query untuk Tablet */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #mycard {
+        min-width: auto;
+    }
+
+    #editForm {
+        min-width: auto;
+    }
+
+    .tombol-logout {
+        width: 100%;
+    }
+}

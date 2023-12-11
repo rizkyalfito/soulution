@@ -8,6 +8,7 @@ import Login from '../views/pages/login';
 import SignUp from '../views/pages/signup';
 import DetailArticle from '../views/pages/detail-article';
 import Test from '../views/pages/test';
+import Profile from '../views/pages/profile';
 
 const routes = {
   '/': Home, // default page
@@ -21,6 +22,7 @@ const routes = {
   '/signup': SignUp,
   '/detail-article': DetailArticle,
   '/test':Test,
+  '/profile' : Profile,
 };
 
 export default routes;

@@ -3,6 +3,7 @@ import { tipsShortTemplate, tipsLongTemplate } from '../templates/tipsTemplate';
 import { articleItemTemplate } from '../templates/articleCardTemplate';
 import articleSource from '../../../data/source-article';
 
+
 const Tips = {
   async render() {
     return `
