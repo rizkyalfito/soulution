@@ -24,17 +24,17 @@
         <button id="hamburgerButton">☰</button>
       </div>
       <div class="app-bar__brand">
-        <a href="#/landing-page"><h1>Soulution</h1></a>
+        <a href="#/home"><h1>Soulution</h1></a>
       </div>
       <nav id="navigationDrawer" class="app-bar__navigation">
         <ul>
-          <li><a href="#/home">Home</a></li>
-          <li><a href="#/check">Check</a></li>
-          <li><a href="#/tips">Tips</a></li>
-          <li><a href="#/forum">Forum</a></li>
-          <li><a href="#/contact-us">Contact Us</a></li>
+          <li><a href="#/home" class="menu-item active">Home</a></li>
+          <li><a href="#/check" class="menu-item">Check</a></li>
+          <li><a href="#/tips" class="menu-item">Tips</a></li>
+          <li><a href="#/forum" class="menu-item">Forum</a></li>
+          <li><a href="#/contact-us" class="menu-item">Contact Us</a></li>
           <li>
-            <a href="#" data-toggle="modal" data-target="#profileModal">
+            <a href="#/profile">
               <i class="fa fa-user"></i>
             </a>
           </li>
@@ -49,5 +49,65 @@
         <p>Capstone MSIB X Dicoding Indonesia</p>
       </div>
     </footer>
+
+
+
+    <script>
+                document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll(".menu-item");
+
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function () {
+                menuItems.forEach(function (item) {
+                  item.classList.remove("active");
+                });
+
+                menuItem.classList.add("active");
+
+                
+                localStorage.setItem("activePage", menuItem.getAttribute("href"));
+              });
+            });
+
+           
+            const activePage = localStorage.getItem("activePage");
+            if (activePage) {
+              
+              menuItems.forEach(function (item) {
+                item.classList.remove("active");
+              });
+
+             
+              document.querySelector(`.menu-item[href="${activePage}"]`).classList.add("active");
+            }
+          });
+          document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll(".menu-item");
+
+            
+            const currentURL = window.location.hash;
+
+            if (currentURL) {
+              
+              menuItems.forEach(function (item) {
+                item.classList.remove("active");
+              });
+
+              
+              document.querySelector(`.menu-item[href="${currentURL}"]`).classList.add("active");
+            }
+
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function () {
+                menuItems.forEach(function (item) {
+                  item.classList.remove("active");
+                });
+
+                menuItem.classList.add("active");
+              });
+            });
+          });
+    </script>
+
   </body>
 </html>

@@ -5,10 +5,11 @@ const LandingPage = {
     <div class="jumbotron">
     <div class="container ">
       <div class="row">
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center align-self-center">
           <h1 class="display-4">Take Care of Your Mental Health</h1>
-          <p class="lead">Soulution, Best Solution for Your Soul</p>
-          <a class="btn btn-primary btn-lg" href="#/home" role="button">Get Started</a>
+          <p class="lead">-- Soulution, Best Solution for Your Soul --</p>
+          <p class="lead2">Don't underestimate your mental problems. Check your mental health here</p>
+          <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
         </div>
         <div class="col-md-6">
           <img src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid">
@@ -21,31 +22,83 @@ const LandingPage = {
     <div class="container text-center">
         <div class="row">
             <div class="col-md-4 mx-auto">
-                <div class="card mb-3" style="width: 15rem;">
-                    <img src="./images/heros/hero.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card mb-3 h-100" style="width: 20rem;">
+                    <img src="./images/heros/hero-check.jpg" style="width: 85%;" class="card-img-top mx-auto" alt="...">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">Check</h5>
+                        <p class="card-text" style="text-align: justify;">Find out how much stress you're under by answering some psychology questions that can measure your stress levels.</p>
+                        <button class="cssbuttons-io-button" onclick="window.location.href='#/check'">
+                          Let's try
+                          <div class="icon">
+                            <svg
+                              height="24"
+                              width="24"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M0 0h24v24H0z" fill="none"></path>
+                              <path
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
+
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mx-auto">
-                <div class="card mb-3" style="width: 15rem;">
-                    <img src="./images/heros/hero.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card mb-3 h-100" style="width: 20rem;">
+                    <img src="./images/heros/hero-tips.jpg" class="card-img-top mt-5" alt="...">
+                    <div class="card-body mt-5">
+                        <h5 class="card-title">Tips</h5>
+                        <p class="card-text" style="text-align: justify;">Relieve your stress by reading articles on tips for relieving stress for short or long periods of time.</p>
+                        <button class="cssbuttons-io-button mt-4" onclick="window.location.href='#/tips'">
+                          Let's read
+                          <div class="icon">
+                            <svg
+                              height="24"
+                              width="24"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M0 0h24v24H0z" fill="none"></path>
+                              <path
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mx-auto">
-                <div class="card mb-3" style="width: 15rem;">
-                    <img src="./images/heros/hero.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card mb-3 h-100" style="width: 20rem;">
+                    <img src="./images/heros/hero-forum.jpg" style="width: 95%;" class="card-img-top mt-2" alt="...">
+                    <div class="card-body mt-4">
+                        <h5 class="card-title">Forum</h5>
+                        <p class="card-text mb-5" style="text-align: justify;">Tell us about your experiences with stress or how you deal with stress and become a helper for many people.</p>
+                        <button class="cssbuttons-io-button" onclick="window.location.href='#/forum'">
+                          Let's talk
+                          <div class="icon">
+                            <svg
+                              height="24"
+                              width="24"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M0 0h24v24H0z" fill="none"></path>
+                              <path
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,20 +112,14 @@ const LandingPage = {
         <div class="col-md-5 align-mid">
           <img src="./images/heros/hero2.png" alt="Banner Image" class="img-fluid">
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center align-self-center">
           <h2 class="display-4">Mental health is important for you</h2>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="route-banner" >
-    <div class="container">
-    <div class="row">
-          <h3 class="display-4">Don't underestimate your mental problems. Check your mental health here</h3>
-    </div>
-  </div>
-  </div>
+  
 
         `;
   },
