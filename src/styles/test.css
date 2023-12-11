@@ -8,3 +8,86 @@
     color: white;
 
 }
+#cat1,
+#cat2,
+#cat3, 
+#cat4, 
+#cat5{
+    width: 100px;
+    height: 50px;
+    background-color: #F5F5F5;
+    color: #4299A5;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid #4fc0d0;
+  }
+  .buttonAnswer{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+}
+#cat1:hover,
+#cat2:hover,
+#cat3:hover, 
+#cat4:hover, 
+#cat5:hover{
+    background-color: #4299a542;
+}
+.number{
+    color: #f0f0f0;
+    padding: 0.3rem;
+    background-color: #4299A5;
+    border-radius: 10px;
+    width: 150%;
+    text-align: center;
+}
+.nomor{
+    font-size: 20px;
+}
+.test-soal{
+    font-size: 20px;
+}
+#questionlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.questCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4fc0d0;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 75%;
+}
+#next-btn{
+    background-color: #4299A5;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #f0f0f0;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+}
+.next-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.next{
+    width: 70%;
+}
+#next-btn:hover{
+    background-color: #4299a542;
+}
+.test-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
