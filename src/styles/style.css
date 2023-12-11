@@ -108,6 +108,32 @@ h1 {
   margin-bottom: 5px;
   width: 100%;
 }
+
+.app-bar .app-bar__navigation ul li a:hover {
+  color: #4fc0d0;
+}
+
+.app-bar .app-bar__navigation ul li a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid #4fc0d0;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.app-bar .app-bar__navigation ul li a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.app-bar .app-bar__navigation ul li a.active {
+  color: white;
+  background-color: #4fc0d0;
+  border-radius: 8px;
+  
+
+}
+
 .app-bar .app-bar__navigation ul li {
   list-style-type: none;
 }
