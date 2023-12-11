@@ -21,7 +21,7 @@ const Login = {
         return `
             <div class="login-container">
                 <div class="input-container">
-                    <h2>WELCOME!</h2>
+                    <h2>Log In</h2>
                     <h3 class="text_login">Log In to your account</h3>
                     <form id="login-form" class="login-form"> 
                         <input id="email" type="email" class="input-label" placeholder="Email" />

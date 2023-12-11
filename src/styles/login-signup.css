@@ -187,34 +187,47 @@
   }
 }
  
- 
+@media screen and (max-width: 1200px) {
+  
+}
 
-
-
-@media screen and (max-width: 600px) {
-
-
-  .input-container {
-    margin-top: 15px;
+@media screen and (max-width: 1000px) {
+  .login-container {
+    padding-left: 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
-  .input-container h1 {
-    margin-top: 0;
-    padding: 10px;
+  .input-label,
+  .register-text {
+    width: 400px;
+    max-width: 400px;
   }
+
   .gambar {
-    float: none;
     width: 100%;
-    max-width: 100%;
-    height: auto; /* Memastikan tinggi gambar disesuaikan dengan lebar sesuai rasio aslinya */
-  display: block;
-  }
-
-  .keterangan {
-    margin-top: 10px;
-  }
-  .input-label {
-    width: 100%; /* Mengubah lebar menjadi 100% pada layar dengan lebar maksimum 600px */
-    max-width: 540px; /* Batasi lebar maksimum pada layar kecil agar tidak terlalu melebar */
+    max-width: none;
+    margin-top: 1rem;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .login-container {
+    padding-left: 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .input-label,
+  .register-text {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .gambar {
+    width: 100%;
+    max-width: none;
+    margin-top: 1rem;
+  }
+}
+
