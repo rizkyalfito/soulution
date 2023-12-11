@@ -18,7 +18,7 @@ const SignUp = {
     return `
       <div class="login-container">
         <div class="input-container">
-          <h2>WELCOME!</h2>
+          <h2>Sign Up</h2>
           <h3 class="text_login">Sign Up to your account</h3>
           <form id="signup-form" class="login-form"> 
             <input id="email" type="email" class="input-label" placeholder="Email" />
