@@ -1,6 +1,5 @@
 class questionsource {
-    // eslint-disable-next-line consistent-return
-    static async article() {
+    static async Question() {
       try {
         const response = await fetch('./data/question.json');
   
@@ -8,7 +7,7 @@ class questionsource {
           throw new Error('Network response was not ok');
         }
         const responseJson = await response.json();
-        return responseJson.artikelData;
+        return responseJson.QuestionText;
       } catch (error) {
         console.error('Error while fetching data:', error);
       }
@@ -16,3 +15,5 @@ class questionsource {
   }
   
   export default questionsource;
+
+  
