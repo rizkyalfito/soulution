@@ -37,7 +37,7 @@ const Login = {
                     </form>
                 </div>
                 <div class="container_img">
-                    <img src="./images/heros/login.jpg" class="gambar" width="500px" height="450px" alt="LogIn"/>
+                    <img src="./images/heros/login3.jpg" class="gambar"  alt="LogIn"/>
                 </div>
             </div>
         `;
