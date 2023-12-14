@@ -26,7 +26,7 @@ body {
 #mainContent {
   display: flex;
   flex-direction: column;
- justify-content: flex-start;
+  justify-content: flex-start;
   font-family: 'Manrope', sans-serif;
 }
 
@@ -65,6 +65,7 @@ h1 {
   font-size: 18px;
   padding: 8px;
   cursor: pointer;
+  color: black;
 }
 
 .app-bar .app-bar__brand {
@@ -97,7 +98,7 @@ h1 {
   left: 0;
 }
 
-.app-bar .app-bar__navigation ul{
+.app-bar .app-bar__navigation ul {
   background-color: #f5f5f5;
 }
 .app-bar .app-bar__navigation ul li a {
@@ -131,8 +132,6 @@ h1 {
   color: white;
   background-color: #4fc0d0;
   border-radius: 8px;
-  
-
 }
 
 .app-bar .app-bar__navigation ul li {

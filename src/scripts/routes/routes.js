@@ -20,9 +20,9 @@ const routes = {
   '/contact-us': ContactUs,
   '/login': Login,
   '/signup': SignUp,
-  '/detail-article': DetailArticle,
-  '/test':Test,
-  '/profile' : Profile,
+  '/detail-article/:id': DetailArticle,
+  '/test': Test,
+  '/profile': Profile,
 };
 
 export default routes;
