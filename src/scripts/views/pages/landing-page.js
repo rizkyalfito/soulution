@@ -106,10 +106,10 @@ const LandingPage = {
     </div>
 </div>
 
-  <div class="banner">
-    <div class="container">
+  <div class="banner"> 
+    <div class="container"> 
       <div class="row">
-        <div class="col-md-5 align-mid">
+        <div class="col-md-5 align-mid"> 
           <img src="./images/heros/hero2.png" alt="Banner Image" class="img-fluid">
         </div>
         <div class="col-md-6 text-center align-self-center">

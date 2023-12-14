@@ -11,7 +11,7 @@ const questionTemplate = (question) => `
             <button id="cat2" type="submit" >Almost Never</button>
             <button id="cat3" type="submit" >Sometimes</button>
             <button id="cat4" type="submit" >Fairly Often</button>
-            <button id="cat5" type="submit" >Often</button>
+            <button id="cat5" type="submit" >Very Often</button>
         </div>
     </div>
 `;

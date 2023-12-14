@@ -28,27 +28,26 @@ const Test = {
 
     let currentQuestion = 0;
 
-    // Add event listener for the Next button
+    
     document.getElementById('next-btn').addEventListener('click', () => {
-      // Increase current question
+      
       currentQuestion++;
 
       if (currentQuestion >= questions.length) {
-        // Handle reaching the last question
-        // You can display a message or perform other actions
+       
         document.querySelector('#next-btn').textContent = 'Finish';
         document.querySelector('#next-btn').addEventListener('click', () => {
-          // Go to the results page
-          window.location.href = '/results';
+         
+          window.location.href = '#/hasil';
         });
       } else {
-        // Display the next question
+        
         const nextQuestion = questionTemplate(questions[currentQuestion]);
         questionContainer.innerHTML = nextQuestion;
       }
     });
 
-    // Display the first question
+    
     questionContainer.innerHTML += questionTemplate(questions[currentQuestion]);
   },
   };

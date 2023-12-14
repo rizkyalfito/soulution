@@ -1,0 +1,23 @@
+.hasil-up{
+    height: 130px;
+    background-color: #4299A5;
+    text-align: center;
+}
+.hasil-up h2{
+    padding: 3rem;
+    color: white;
+}
+.img-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
+}
+.img-hasil img{
+    width: 400px;
+}
+.hasil-desk h3{
+    font-weight: bolder;
+    color: #4299A5;
+    text-align: center;
+}
