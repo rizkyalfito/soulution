@@ -13,14 +13,14 @@ const Hasil = {
         </div>
     <div class = "hasil-desk">
         <h3>Your Stress Level</h3>
-        <div id="result"></div>
+        <div id="resul"></div>
     </div>
 `;
     },
   
     // eslint-disable-next-line no-empty-function
     async afterRender() {
-        
+
     },
   };
   
