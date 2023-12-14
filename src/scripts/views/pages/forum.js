@@ -23,26 +23,8 @@ const Forum = {
   },
 
   async afterRender() {
-    // eslint-disable-next-line no-undef
-    const socket = io.connect('http://localhost:3000/api');
-
-    const sendMessage = document.getElementById('sendMessage');
-    const message = document.getElementById('message');
-    const chatbox = document.getElementById('chatbox');
-
-    sendMessage.addEventListener('click', (e) => {
-      e.preventDefault();
-      socket.emit('chat', {
-        message: message.value,
-      });
-    });
-
-    socket.io('chat', (data) => {
-      chatbox.innerHTML += `
-            <p><strong>${data.message}</strong></p>
-        `;
-    });
-  },
-};
+  // 
+  }
+}
 
 export default Forum;
