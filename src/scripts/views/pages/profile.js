@@ -52,9 +52,9 @@ const Profile = {
     axios.post('http://localhost:3000/api/profile/update-username', { username: newName }, { withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Username updated') {
-          alert('Username updated successfully, please refresh to change');
+          alert('Username updated successfully');
           // Perbarui tampilan dengan username yang baru
-          document.getElementById('email-profile').textContent = newName;
+          document.getElementById('username-profile').textContent = newName;
         } else {
           console.error('Username update failed');
         }
