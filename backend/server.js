@@ -1,3 +1,5 @@
+// backend/server.js
+
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
@@ -20,8 +22,15 @@ app.use(session({
     secret: 'KisameHada21', // Ganti dengan kunci rahasia yang kuat
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false } // Set secure: true jika menggunakan HTTPS
+    cookie: { 
+      secure: false,
+      httpOnly: true      
+     }
 }));
+
+const profileRoutes = require('./routes/profile');
+
+app.use('/api/profile', profileRoutes);
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '../public')));
@@ -35,3 +44,5 @@ app.use('/api', routes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
