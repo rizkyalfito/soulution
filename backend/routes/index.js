@@ -10,6 +10,5 @@ router.use('/auth', authRoutes);
 
 router.use('/profile', profileRoutes);
 
-// ... (tambahkan rute lainnya jika ada)
 
 module.exports = router;
