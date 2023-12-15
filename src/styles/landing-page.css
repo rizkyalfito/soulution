@@ -8,6 +8,7 @@
     min-height: 60vh;
     display: flex;
     background-color: #ffffff;
+    padding-top: 20px;
   }
 
   .jumbotron .row {
@@ -138,6 +139,13 @@
   .cssbuttons-io-button:active .icon {
     transform: scale(0.95);
   }
+
+  .active {
+    background-color: #4fc0d0;
+    border-radius: 8px;
+    color: white;
+  }
+  
   
   @media screen and (max-width: 425px) {
     h2.display-4 {
@@ -154,34 +162,12 @@
   
   @media screen and (max-width: 769px) {
     .banner .row{
-      /*justify-items: center;
-      justify-content: center;*/
       flex-direction: column;
       text-align: center;
     }
   }
 
-  @media screen and (max-width: 600px) {
-    .feature .container{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .feature .col-md-4 {
-      margin-bottom: 1rem;
-    }
-  }
-
-  @media screen and (min-width: 768px)  {
-    .feature .col-md-4 {
-      margin: 1rem;
-      
-      
-    }
-  }
+  
   
   
 

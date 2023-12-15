@@ -5,29 +5,37 @@ const Profile = {
   async render() {
     const user = await this.getUserProfile();
     return `
-
-        <i id="logo" class="fa fa-user";></i>
-        <div id="mycard" class="card">
-          <h2 id="username-profile" style="font-weight : bold";>Username</h2>
-          <p id="email-profile">${user.email}</p>
-          <form id="editForm">
-            <input type="text" id="newName" name="newName" required>
-            <button type="button" onclick="Profile.editName()" style="font-weight : bold";>Save</button>
-          </form>
-        </div>
-        <button class="tombol-logout" type="submit" style="font-weight : bold";> Log Out </button>
-
-
-      `;
+      <i id="logo" class="fa fa-user";></i>
+      <p id="email-profile" style="text-align: center";>${user.email}</p>
+      <div id="mycard" class="card">
+        <form id="editForm">
+          <p id="username-profile" style="font-weight: bold;">${user.username}</p>
+          <input type="text" id="newName" name="newName" value="${user.username}" required>
+          <button id="saveButton" type="button" style="font-weight: bold;">Save</button>
+        </form>
+      </div>
+      <button id="tombol-logout" class="tombol-logout" type="button" style="font-weight: bold;">Log Out</button>
+    `;
   },
 
   async afterRender() {
-    //  
+    document.getElementById('saveButton').addEventListener('click', () => {
+      this.saveName(); // Panggil saveName dari objek Profile
+    });
+  
+    document.getElementById('tombol-logout').addEventListener('click', () => {
+      const isConfirmed = window.confirm('Are you sure you want to log out?');
+            
+            if (isConfirmed) {
+                this.logout();
+            }
+      this.logout(); // Panggil logout dari objek Profile
+    });
   },
 
   async getUserProfile() {
     try {
-      const response = await axios.get('http://localhost:3000/api/auth/check-session');
+      const response = await axios.get('http://localhost:3000/api/auth/check-session',{ withCredentials: true });
       if (response.data.loggedIn) {
         return response.data.user;
       }
@@ -41,7 +49,7 @@ const Profile = {
     const newName = document.getElementById('newName').value;
 
     // Kirim permintaan ke server untuk menyimpan perubahan nama
-    axios.post('http://localhost:3000/api/auth/update-username', { username: newName })
+    axios.post('http://localhost:3000/api/profile/update-username', { username: newName }, { withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Username updated') {
           alert('Username updated successfully');
@@ -53,11 +61,14 @@ const Profile = {
       })
       .catch((error) => {
         console.error('Error during username update', error);
+        // Tambahkan penanganan kesalahan di sini
+        alert('Error during username update. See console for details.');
       });
-  },
+},
+
 
   logout() {
-    axios.get('http://localhost:3000/api/auth/logout')
+    axios.get('http://localhost:3000/api/auth/logout',{ withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Logout successful') {
           window.location.hash = '#/login'; 

@@ -1,8 +1,9 @@
 // backend/routes/profile.js
 const express = require('express');
-const db = require('../data');
+
 
 const router = express.Router();
+const db = require('../data');
 
 router.post('/update-username', async (req, res) => {
     const { username } = req.body;

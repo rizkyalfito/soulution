@@ -1,18 +1,20 @@
-.up-content{
+/* Default styles for larger screens */
+.up-content {
     height: 200px;
     background-color: #4299A5;
     text-align: center;
 }
-.up-content p{
+
+.up-content p {
     padding-top: 2rem;
     color: white;
-
 }
+
 #cat1,
 #cat2,
-#cat3, 
-#cat4, 
-#cat5{
+#cat3,
+#cat4,
+#cat5 {
     width: 100px;
     height: 50px;
     background-color: #F5F5F5;
@@ -21,42 +23,57 @@
     cursor: pointer;
     font-size: 15px;
     border: 1px solid #4fc0d0;
+<<<<<<< HEAD
     padding:0%;
     
   }
   .buttonAnswer{
+=======
+    margin: 5px;
+    font-size: 12px;
+}
+
+.buttonAnswer {
+>>>>>>> 1d0cd1eedbeee79358227dd9631d7e449f0e8535
     display: flex;
     justify-content: space-between;
     width: 80%;
     align-items: center;
 }
+
 #cat1:hover,
 #cat2:hover,
-#cat3:hover, 
-#cat4:hover, 
-#cat5:hover{
+#cat3:hover,
+#cat4:hover,
+#cat5:hover {
     background-color: #4299a542;
 }
-.number{
+
+.number {
     color: #f0f0f0;
     padding: 0.3rem;
     background-color: #4299A5;
     border-radius: 10px;
     width: 150%;
     text-align: center;
+
 }
-.nomor{
+
+.nomor {
     font-size: 20px;
 }
-.test-soal{
+
+.test-soal {
     font-size: 20px;
 }
-#questionlist{
+
+#questionlist {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.questCard{
+
+.questCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,31 +81,113 @@
     margin: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
-    width: 75%;
+    
 }
-#next-btn{
+
+#next-btn {
     background-color: #4299A5;
     border: none;
     width: 80%;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 18px;
     color: #f0f0f0;
     font-weight: bolder;
     padding-top: 0%;
 }
-.next-button{
+
+.next-button {
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
-.next{
+
+.next {
     width: 70%;
 }
-#next-btn:hover{
+
+#next-btn:hover {
     background-color: #4299a542;
 }
-.test-content{
+
+.test-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .up-content {
+        height: 150px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #cat1,
+    #cat2,
+    #cat3,
+    #cat4,
+    #cat5 {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .buttonAnswer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .test-content {
+        width: 100%;
+    }
+
+    .questCard {
+        width: 100%;
+    }
+
+    .next {
+        width: 100%;
+    }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 576px) {
+    .up-content {
+        height: 100px;
+    }
+
+    .buttonAnswer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .test-content {
+        width: 100%;
+    }
+
+    .questCard {
+        width: 100%;
+    }
+
+    .next {
+        width: 100%;
+    }
+
+#cat1,
+#cat2,
+#cat3,
+#cat4,
+#cat5 {
+    width:300px;
+    font-size: 18px;
+}
+
+.up-content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 }

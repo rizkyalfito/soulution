@@ -4,17 +4,22 @@ import axios from 'axios';
 
 const checkSession = async () => {
     try {
-        const response = await axios.get('http://localhost:3000/api/auth/check-session');
+        const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
         console.log(response.data);
 
-        // Lakukan sesuatu berdasarkan respons sesi di sini
+        // Update status atau lakukan tindakan berdasarkan respons sesi di sini
+        if (response.data.loggedIn) {
+            // Pengguna masuk, lakukan sesuatu
+            console.log('User is logged in:', response.data.user);
+        } else {
+            // Pengguna tidak masuk, lakukan sesuatu
+            console.log('User is not logged in');
+        }
     } catch (error) {
         console.error('Error checking session', error);
     }
 };
 
-// Panggil fungsi checkSession ketika diperlukan
-checkSession();
 
 const Login = {
     async render() {
@@ -37,7 +42,7 @@ const Login = {
                     </form>
                 </div>
                 <div class="container_img">
-                    <img src="./images/heros/login.jpg" class="gambar" width="500px" height="450px" alt="LogIn"/>
+                    <img src="./images/heros/login3.jpg" class="gambar"  alt="LogIn"/>
                 </div>
             </div>
         `;
@@ -68,13 +73,17 @@ const Login = {
                     email: emailInput.value,
                     password: passwordInput.value,
                 }, { withCredentials: true });
-
+            
                 // Simulasikan delay 2 detik (2000 milidetik)
                 await new Promise(resolve => setTimeout(resolve, 2000));
-
+            
                 if (response.status === 200) {
                     console.log('Login successful');
-                    checkSession();
+            
+                    // Pastikan pemanggilan checkSession setelah selesai proses login
+                    await checkSession();
+            
+                    // Pastikan tidak ada navigasi sebelum checkSession selesai
                     window.location.hash = '#/home';
                 } else {
                     console.error('Login failed');
@@ -82,7 +91,7 @@ const Login = {
                 }
             } catch (error) {
                 console.error('Error during login', error);
-
+            
                 if (error.response && error.response.status === 401) {
                     alert('Invalid email or password. Please try again.');
                 } else {
@@ -92,9 +101,8 @@ const Login = {
                 loginButton.style.display = 'block';
                 loadingIndicator.style.display = 'none';
             }
+                     
         });
-
-        checkSession();
     },
 };
 
