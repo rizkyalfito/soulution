@@ -13,8 +13,9 @@ const Forum = {
             <div class="input-chat">
                 <form id="chatForm" action="">
                     <input id="message" name="message" class="message" type="text" placeholder="Type a message here...">
-                    <button id="sendMessage" type="submit">kirim</button>
-                    <input class="image" type="image"  src="./images/icons/forumImgInput.svg" value=""/>
+                    <button id="sendMessage" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 51 44" fill="none">
+                    <path d="M0 43.1651V27.2155L21.3333 21.899L0 16.5825V0.632996L50.6667 21.899L0 43.1651Z" fill="#4299A5"/>
+                    </svg></button>
                 </form>
             </div>
         </div>
@@ -23,8 +24,50 @@ const Forum = {
   },
 
   async afterRender() {
-  // 
-  }
-}
+    const message = document.getElementById('message');
+    const sendMessage = document.getElementById('sendMessage');
+    const chatbox = document.getElementById('chatbox');
+
+    sendMessage.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (message.value) {
+        const chatProfile = document.createElement('div');
+        chatProfile.className = 'chatProfile';
+        chatProfile.className = 'd-flex align-items-center mb-2';
+
+        const profileImage = document.createElement('img');
+        profileImage.src = './images/icons/profile-circle.svg';
+        profileImage.style.width = '44px';
+        profileImage.style.height = '44px';
+        profileImage.alt = '';
+
+        const username = document.createElement('p');
+        username.className = 'fw-bold';
+        username.textContent = 'anonymous';
+        username.style.margin = '0';
+
+        chatProfile.appendChild(profileImage);
+        chatProfile.appendChild(username);
+
+        const chatMessage = document.createElement('div');
+        chatMessage.className = 'w-50 ms-4 rounded-2';
+        chatMessage.style.backgroundColor = '#4299a5';
+
+        const messageText = document.createElement('p');
+        messageText.className = 'p-2 text-light m-0 mb-3';
+        messageText.textContent = message.value;
+
+        chatMessage.appendChild(messageText);
+
+        const chatContainer = document.createElement('div');
+        chatContainer.appendChild(chatProfile);
+        chatContainer.appendChild(chatMessage);
+
+        chatbox.appendChild(chatContainer);
+        message.value = '';
+      }
+    });
+  },
+};
 
 export default Forum;
