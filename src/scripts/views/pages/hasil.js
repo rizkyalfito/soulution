@@ -13,7 +13,7 @@ const Hasil = {
         </div>
     <div class = "hasil-desk">
         <h3>Your Stress Level</h3>
-        <div id="resul"></div>
+        <div id="result"></div>
     </div>
 `;
     },
