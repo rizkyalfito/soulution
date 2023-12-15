@@ -6,8 +6,11 @@ const router = express.Router();
 const db = require('../data');
 
 // Implementasi logika login
+// Rute login
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
+
+    console.log('Login Request Received:', email);
 
     if (email && password) {
         try {
@@ -20,21 +23,25 @@ router.post('/login', async (req, res) => {
                     // Set session
                     req.session.user = user;
 
-                    res.json({ message: 'Login successful' });
+                    console.log('Login successful:', user);
+
+                    res.json({ loggedIn: true, user, message: 'Login successful' }); // Tambahkan loggedIn: true
                 } else {
-                    res.status(401).json({ message: 'Invalid email or password' });
+                    console.log('Invalid email or password');
+                    res.status(401).json({ loggedIn: false, message: 'Invalid email or password' });
                 }
             } else {
-                res.status(401).json({ message: 'Invalid email or password' });
+                console.log('Invalid email or password');
+                res.status(401).json({ loggedIn: false, message: 'Invalid email or password' });
             }
         } catch (error) {
-            res.status(500).json({ message: 'Internal Server Error' });
+            console.error('Error during login', error);
+            res.status(500).json({ loggedIn: false, message: 'Internal Server Error' });
         }
     } else {
-        res.status(400).json({ message: 'Email and password are required' });
+        res.status(400).json({ loggedIn: false, message: 'Email and password are required' });
     }
 });
-
 router.post('/signup', async (req, res) => {
     const { email, password, username } = req.body;
 
@@ -72,6 +79,7 @@ router.get('/logout', (req, res) => {
         }
     });
 });
+
 
 router.get('/check-session', (req, res) => {
     if (req.session.user) {

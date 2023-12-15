@@ -24,5 +24,16 @@ module.exports = {
             });
         }),
 
+        updateUsername: async (email, newUsername) => new Promise((resolve, reject) => {
+            pool.query('UPDATE users SET username = ? WHERE email = ?', [newUsername, email], (error, results) => {
+                if (error) {
+                    reject(error);
+                    return;
+                }
+    
+                resolve(results);
+            });
+        }),
+
     // Tambahan fungsi database sesuai kebutuhan
 };
