@@ -133,11 +133,11 @@
         padding-right: 10px;
     }
 
-    #cat1,
-    #cat2,
-    #cat3,
-    #cat4,
-    #cat5 {
+    #value-1,
+    #value-2,
+    #value-3,
+    #value-4,
+    #value-5 {
         width: 100%;
         font-size: 15px;
     }
@@ -186,11 +186,11 @@
         width: 100%;
     }
 
-#cat1,
-#cat2,
-#cat3,
-#cat4,
-#cat5 {
+#value-1,
+#value-2,
+#value-3,
+#value-4,
+#value-5 {
     width:300px;
     font-size: 18px;
 }
