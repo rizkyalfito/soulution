@@ -23,18 +23,11 @@
     cursor: pointer;
     font-size: 15px;
     border: 1px solid #4fc0d0;
-<<<<<<< HEAD
-    padding:0%;
-    
-  }
-  .buttonAnswer{
-=======
     margin: 5px;
     font-size: 12px;
 }
 
 .buttonAnswer {
->>>>>>> 1d0cd1eedbeee79358227dd9631d7e449f0e8535
     display: flex;
     justify-content: space-between;
     width: 80%;
