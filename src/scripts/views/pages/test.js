@@ -29,15 +29,15 @@ const Test = {
     const updateQuestion = () => {
       if (currentQuestion >= questions.length) {
         document.querySelector('#next-btn').textContent = 'Finish';
-document.querySelector('#next-btn').addEventListener('click', () => {
-  const pssScore = calculatePSSScore(userAnswers);
+        document.querySelector('#next-btn').addEventListener('click', () => {
+          const pssScore = calculatePSSScore(userAnswers);
 
-  // Simpan nilai pssScore ke sessionStorage
-  sessionStorage.setItem('pssScore', pssScore);
+          // Simpan nilai pssScore ke sessionStorage
+          sessionStorage.setItem('pssScore', pssScore);
 
-  // Pindah ke halaman hasil
-  window.location.href = '#/hasil';
-});
+          // Pindah ke halaman hasil
+          window.location.href = '#/hasil';
+        });
       } else {
         const nextQuestion = questionTemplate(questions[currentQuestion]);
         questionContainer.innerHTML = nextQuestion;
@@ -54,8 +54,22 @@ document.querySelector('#next-btn').addEventListener('click', () => {
 
       currentQuestion++;
       updateQuestion();
+
+      if (currentQuestion >= questions.length) {
+        document.querySelector('#next-btn').textContent = 'Finish';
+        document.querySelector('#next-btn').addEventListener('click', () => {
+          const pssScore = calculatePSSScore(userAnswers);
+
+          // Simpan nilai pssScore ke sessionStorage
+          sessionStorage.setItem('pssScore', pssScore);
+
+          // Pindah ke halaman hasil
+          window.location.href = '#/hasil';
+        });
+      }
     });
 
+    // Pemanggilan pertama untuk menetapkan pertanyaan awal
     updateQuestion();
   },
 };
