@@ -7,6 +7,23 @@
     visibility: hidden;
     display: none;
   }
+
+.app-bar .app-bar__brand h1{
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .app-bar .app-bar__menu button {
+    margin-top: 0px;
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 20px;
+    width: 50%;
+  }
+
+  .app-bar {
+    padding: 8px 5px;
+  }
   
 }
 

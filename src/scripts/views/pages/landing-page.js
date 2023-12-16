@@ -119,23 +119,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      
-  <div class="banner"> 
-    <div class="container"> 
-      <div class="row">
-        <div class="col-md-5 align-mid"> 
-          <img src="./images/heros/hero2.png" alt="Banner Image" class="img-fluid">
-        </div>
-        <div class="col-md-6 text-center align-self-center">
-          <h2 class="display-4">Mental health is important for you</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      
+      </div>     
 
             `;
       },
