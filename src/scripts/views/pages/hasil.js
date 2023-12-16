@@ -1,4 +1,3 @@
-import questionTemplate from "../templates/questionTemplate";
 const Hasil = {
     async render() {
       const total = document.getElementById("totalValue").value;
