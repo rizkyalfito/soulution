@@ -1,6 +1,7 @@
-
 const Hasil = {
     async render() {
+      const total = document.getElementById("totalValue").value;
+      
       return `
       
   <div class=" w-100 rounded hasil-up">
@@ -13,7 +14,9 @@ const Hasil = {
         </div>
     <div class = "hasil-desk">
         <h3>Your Stress Level</h3>
-        <div id="result"></div>
+        <div id="result">
+        <h1>${total}</h1>
+        </div>
     </div>
 `;
     },
