@@ -84,7 +84,7 @@ const Login = {
                     await checkSession();
             
                     // Pastikan tidak ada navigasi sebelum checkSession selesai
-                    window.location.hash = '#/home';
+                    window.location.hash = '#/check';
                 } else {
                     console.error('Login failed');
                     alert('Login failed. Please check your email and password.');

@@ -1,3 +1,20 @@
+/* eslint-disable no-alert */
+import axios from 'axios';
+
+const checkSession = async () => {
+    try {
+        const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+
+        if (!response.data.loggedIn) {
+            // Jika pengguna tidak masuk, arahkan mereka ke halaman login
+            alert('You need to login first');
+            window.location.hash = '#/login';
+        }
+    } catch (error) {
+        console.error('Error checking session', error);
+    }
+};
+
 const Check = {
   async render() {
     return `
@@ -45,8 +62,17 @@ const Check = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-  },
+    // Periksa sesi sebelum memungkinkan pengguna mengakses halaman test
+    await checkSession();
+
+    // Setelah sesi terverifikasi, tambahkan event listener ke tombol "Get Started"
+    const getStartedButton = document.querySelector('.btn.btn-second.btn-lg');
+    getStartedButton.addEventListener('click', () => {
+        // Redirect ke halaman test
+        window.location.hash = '#/check';
+    });
+},
+
 };
 
 export default Check;

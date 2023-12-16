@@ -20,18 +20,18 @@ const Profile = {
 
   async afterRender() {
     document.getElementById('saveButton').addEventListener('click', () => {
-      this.saveName(); // Panggil saveName dari objek Profile
+        this.saveName();
     });
-  
-    document.getElementById('tombol-logout').addEventListener('click', () => {
-      const isConfirmed = window.confirm('Are you sure you want to log out?');
-            
-            if (isConfirmed) {
-                this.logout();
-            }
-      this.logout(); // Panggil logout dari objek Profile
+
+    document.getElementById('tombol-logout').addEventListener('click', async () => {
+        const isConfirmed = window.confirm('Are you sure you want to log out?');
+
+        if (isConfirmed) {
+            await this.logout();
+        }
     });
-  },
+},
+
 
   async getUserProfile() {
     try {
@@ -62,7 +62,7 @@ const Profile = {
       .catch((error) => {
         console.error('Error during username update', error);
         // Tambahkan penanganan kesalahan di sini
-        alert('Error during username update. See console for details.');
+        alert('Error during username update. You need to login first');
       });
 },
 
@@ -71,7 +71,7 @@ const Profile = {
     axios.get('http://localhost:3000/api/auth/logout',{ withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Logout successful') {
-          window.location.hash = '#/login'; 
+          window.location.hash = '#/home'; 
         } else {
           console.error('Logout failed');
         }
