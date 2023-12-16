@@ -10,37 +10,53 @@
     color: white;
 }
 
-#cat1,
-#cat2,
-#cat3,
-#cat4,
-#cat5 {
-    width: 100px;
-    height: 50px;
-    background-color: #F5F5F5;
-    color: #4299A5;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    border: 1px solid #4fc0d0;
-    margin: 5px;
-    font-size: 12px;
-}
-
-.buttonAnswer {
+.radio-input {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: row;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4299A5;
+  }
+  
+  .radio-input input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-input label {
+    display: flex;
     align-items: center;
-}
-
-#cat1:hover,
-#cat2:hover,
-#cat3:hover,
-#cat4:hover,
-#cat5:hover {
+    padding: 10px;
+    border: 1px solid #4fc0d0;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .radio-input input[type="radio"]:checked + label {
     background-color: #4299a542;
-}
+    color: #4299A5;
+    border-color: rgb(129, 235, 129);
+    animation: radio-translate 0.5s ease-in-out;
+  }
+  
+  @keyframes radio-translate {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
 
 .number {
     color: #f0f0f0;
@@ -184,3 +200,11 @@
     padding-right: 10px;
 }
 }
+.buttonAnswer input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .radio-label {
+    display: inline-block;
+    margin-right: 10px;
+  }

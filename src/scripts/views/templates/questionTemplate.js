@@ -6,13 +6,18 @@ const questionTemplate = (question) => `
 
     <h3 class="test-soal">${question.text}</h3>
 
-    <div class="buttonAnswer">
-      <button id="cat1" type="submit" data-value="0">Never</button>
-      <button id="cat2" type="submit" data-value="1">Almost Never</button>
-      <button id="cat3" type="submit" data-value="2">Sometimes</button>
-      <button id="cat4" type="submit" data-value="3">Fairly Often</button>
-      <button id="cat5" type="submit" data-value="4">Very Often</button>
-    </div>
+    <div class="radio-input">
+    <input value="value-1" name="value-radio" id="value-1" type="radio">
+    <label for="value-1">Never</label>
+    <input value="value-2" name="value-radio" id="value-2" type="radio">
+    <label for="value-2">Almost Never</label>
+    <input value="value-3" name="value-radio" id="value-3" type="radio">
+    <label for="value-3">Sometimes</label>
+    <input value="value-4" name="value-radio" id="value-4" type="radio">
+    <label for="value-4">Fairly Often</label>
+    <input value="value-5" name="value-radio" id="value-5" type="radio">
+    <label for="value-5">Very Often</label>
+  </div>
   </div>
 `;
 const buttons = document.querySelectorAll('.buttonAnswer button');
