@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Free movie catalogue for you" />
-    <link rel="icon" href="./favicon.png" />
+    <meta name="theme-color" content="#f5f5f5" />
 
     <title>Soulution</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/mental-health-03.png" />
+    <link rel="icon" href="./icons/mental-health-03.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
@@ -50,64 +53,54 @@
       </div>
     </footer>
 
-
-
     <script>
-                document.addEventListener("DOMContentLoaded", function () {
-            const menuItems = document.querySelectorAll(".menu-item");
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
 
-            menuItems.forEach(function (menuItem) {
-              menuItem.addEventListener("click", function () {
-                menuItems.forEach(function (item) {
-                  item.classList.remove("active");
-                });
-
-                menuItem.classList.add("active");
-
-                
-                localStorage.setItem("activePage", menuItem.getAttribute("href"));
-              });
+        menuItems.forEach(function (menuItem) {
+          menuItem.addEventListener('click', function () {
+            menuItems.forEach(function (item) {
+              item.classList.remove('active');
             });
 
-           
-            const activePage = localStorage.getItem("activePage");
-            if (activePage) {
-              
-              menuItems.forEach(function (item) {
-                item.classList.remove("active");
-              });
+            menuItem.classList.add('active');
 
-             
-              document.querySelector(`.menu-item[href="${activePage}"]`).classList.add("active");
-            }
+            localStorage.setItem('activePage', menuItem.getAttribute('href'));
           });
-          document.addEventListener("DOMContentLoaded", function () {
-            const menuItems = document.querySelectorAll(".menu-item");
+        });
 
-            
-            const currentURL = window.location.hash;
+        const activePage = localStorage.getItem('activePage');
+        if (activePage) {
+          menuItems.forEach(function (item) {
+            item.classList.remove('active');
+          });
 
-            if (currentURL) {
-              
-              menuItems.forEach(function (item) {
-                item.classList.remove("active");
-              });
+          document.querySelector(`.menu-item[href="${activePage}"]`).classList.add('active');
+        }
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
 
-              
-              document.querySelector(`.menu-item[href="${currentURL}"]`).classList.add("active");
-            }
+        const currentURL = window.location.hash;
 
-            menuItems.forEach(function (menuItem) {
-              menuItem.addEventListener("click", function () {
-                menuItems.forEach(function (item) {
-                  item.classList.remove("active");
-                });
+        if (currentURL) {
+          menuItems.forEach(function (item) {
+            item.classList.remove('active');
+          });
 
-                menuItem.classList.add("active");
-              });
+          document.querySelector(`.menu-item[href="${currentURL}"]`).classList.add('active');
+        }
+
+        menuItems.forEach(function (menuItem) {
+          menuItem.addEventListener('click', function () {
+            menuItems.forEach(function (item) {
+              item.classList.remove('active');
             });
+
+            menuItem.classList.add('active');
           });
+        });
+      });
     </script>
-
   </body>
 </html>

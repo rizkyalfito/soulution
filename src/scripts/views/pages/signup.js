@@ -35,12 +35,12 @@ const SignUp = {
           </form>
         </div>
         <div class="container_img">
-          <img src="./images/heros/login3.jpg" class="gambar" width="500px" height="450px" alt="LogIn"/>
+          <img data-src="./images/heros/login3.jpg" class="gambar lazyload" width="500px" height="450px" alt="LogIn"/>
         </div>
       </div>
     `;
   },
-  
+
   async afterRender() {
     const signupForm = document.getElementById('signup-form');
     const singupButton = document.getElementById('signup-btn');
@@ -63,15 +63,18 @@ const SignUp = {
       }
 
       try {
-        const response = await axios.post('http://localhost:3000/api/auth/signup', {
-          email: emailInput.value,
-          password: passwordInput.value,
-          username: usernameInput.value,
-        }, { withCredentials: true });
+        const response = await axios.post(
+          'http://localhost:3000/api/auth/signup',
+          {
+            email: emailInput.value,
+            password: passwordInput.value,
+            username: usernameInput.value,
+          },
+          { withCredentials: true }
+        );
 
-        
         // Simulasikan delay 2 detik (2000 milidetik)
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
 
         if (response.data.message === 'Signup successful') {
           alert('Signup successful, log in to continue.');
@@ -91,7 +94,7 @@ const SignUp = {
       } finally {
         singupButton.style.display = 'block';
         loadingIndicator.style.display = 'none';
-    }
+      }
     });
     checkSession();
   },

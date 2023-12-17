@@ -1,7 +1,7 @@
 // Fungsi ini didefinisikan di luar objek LandingPage
 function handleButtonClick(target) {
   // Menghapus kelas 'active' dari semua tombol
-  document.querySelectorAll('.menu-button').forEach(button => button.classList.remove('active'));
+  document.querySelectorAll('.menu-button').forEach((button) => button.classList.remove('active'));
 
   // Menambahkan kelas 'active' pada tombol yang diklik
   const activeButton = document.querySelector(`.menu-button[data-target="${target}"]`);
@@ -13,11 +13,9 @@ function handleButtonClick(target) {
   window.location.href = target;
 }
 
-
-    
-    const LandingPage = {
-      async render() {
-        return `
+const LandingPage = {
+  async render() {
+    return `
         <div id="landing-page" class="d-flex flex-column justify-content-center">
         <div class="jumbotron">
         <div class="container ">
@@ -29,7 +27,7 @@ function handleButtonClick(target) {
               <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
             </div>
             <div class="col-md-6">
-              <img src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid">
+              <img data-src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid lazyload">
             </div>
           </div>
         </div>
@@ -141,24 +139,19 @@ function handleButtonClick(target) {
       
 
             `;
-      },
+  },
 
-      async afterRender() {
-        // Fungsi ini akan dipanggil setelah render()
-        const buttons = document.querySelectorAll('.menu-button');
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+    const buttons = document.querySelectorAll('.menu-button');
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const target = button.getAttribute('data-target');
-      handleButtonClick(target);
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        handleButtonClick(target);
+      });
     });
-  });
+  },
+};
 
-      },
-    };
-
-    
-
-
-    export default LandingPage;
- 
+export default LandingPage;

@@ -1,9 +1,12 @@
 import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import '../styles/style.css';
 import '../styles/responsive.css';
+import swRegister from './utils/sw-register';
 import App from './views/app';
 
 const app = new App({
@@ -18,4 +21,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });

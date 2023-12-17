@@ -2,7 +2,7 @@ const Check = {
   async render() {
     return `
     <div class="px-5 pt-4 w-100 hero">
-    <img class="w-100 rounded banner-hero" src="./images/heros/check-hero.png" alt="hero-check">
+    <img class="w-100 rounded banner-hero lazyload" data-src="./images/heros/check-hero.png" alt="hero-check">
     <p class="fw-bolder articleTagLine-hero">
       Take care of Your <br />
       Mental Health
