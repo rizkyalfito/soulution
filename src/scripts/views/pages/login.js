@@ -64,11 +64,7 @@ const Login = {
                 alert('Email and password are required');
                 return;
             }
-
-            loginButton.style.display = 'none';
-            loadingIndicator.style.display = 'block';
-
-<<<<<<< HEAD
+            
       loginButton.style.display = 'none';
       loadingIndicator.style.display = 'block';
 
@@ -111,44 +107,7 @@ const Login = {
       }
     });
   },
-=======
-            try {
-                const response = await axios.post('http://localhost:3000/api/auth/login', {
-                    email: emailInput.value,
-                    password: passwordInput.value,
-                }, { withCredentials: true });
-            
-                // Simulasikan delay 2 detik (2000 milidetik)
-                await new Promise(resolve => setTimeout(resolve, 2000));
-            
-                if (response.status === 200) {
-                    console.log('Login successful');
-            
-                    // Pastikan pemanggilan checkSession setelah selesai proses login
-                    await checkSession();
-            
-                    // Pastikan tidak ada navigasi sebelum checkSession selesai
-                    window.location.hash = '#/check';
-                } else {
-                    console.error('Login failed');
-                    alert('Login failed. Please check your email and password.');
-                }
-            } catch (error) {
-                console.error('Error during login', error);
-            
-                if (error.response && error.response.status === 401) {
-                    alert('Invalid email or password. Please try again.');
-                } else {
-                    alert('Error during login. Please try again later.');
-                }
-            } finally {
-                loginButton.style.display = 'block';
-                loadingIndicator.style.display = 'none';
-            }
-                     
-        });
-    },
->>>>>>> 6e56d6f6da78a561afa846ffc2747609df4e6a44
+
 };
 
 export default Login;
