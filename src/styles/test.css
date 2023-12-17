@@ -17,6 +17,7 @@
     font-size: 16px;
     font-weight: 600;
     color: #4299A5;
+    text-align: center;
   }
   
   .radio-input input[type="radio"] {
@@ -34,6 +35,8 @@
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in-out;
+    text-align: center;
+    justify-content: center;
   }
   
   .radio-input input[type="radio"]:checked + label {
@@ -41,6 +44,7 @@
     color: #4299A5;
     border-color: rgb(129, 235, 129);
     animation: radio-translate 0.5s ease-in-out;
+    
   }
   
   @keyframes radio-translate {
@@ -193,12 +197,29 @@
 #value-5 {
     width:300px;
     font-size: 18px;
+    
 }
 
 .up-content{
     padding-left: 10px;
     padding-right: 10px;
 }
+.radio-input {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    
+}
+
+.radio-input label {
+    width: 100%; 
+    margin-bottom: 10px; 
+   
+}
+
+
+
+
 }
 .buttonAnswer input[type="radio"] {
     margin-right: 10px;
@@ -207,4 +228,5 @@
   .radio-label {
     display: inline-block;
     margin-right: 10px;
+    
   }

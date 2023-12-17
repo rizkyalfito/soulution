@@ -11,7 +11,7 @@ function calculateStressLevel(score) {
       <h3>Moderated Stress</h3>
       <div class="desk-stress">
       <p class="deskripsi-stress">Your stress level is moderate. It may be helpful to explore stress management techniques such as deep breathing exercises, mindfulness, or regular physical activity. Remember to take breaks and prioritize self-care.<br />
-      Do you need some tips? check it out!</p>
+      <br>Do you need some tips? check it out!</p></br>
       </div>
       <a class="linked-hasil" href="#/tips"><b>Click Here!</b></a>
       `;
@@ -20,7 +20,7 @@ function calculateStressLevel(score) {
       <h3>High Perceived Stress</h3>
       <div class="desk-stress">
       <p class="deskripsi-stress">Your stress level is high. It is crucial to prioritize self-care and seek support. Consider talking to friends, family, or a mental health professional. Implement stress-reducing activities and make time for activities you enjoy<br />
-      You need special treatment. Maybe our tips can help you <p>
+     <br> You need special treatment. Maybe our tips can help you <p></br>
       </div>
       <a class="linked-hasil" href="#/tips"><b>Click Here!</b></a>
       `;
