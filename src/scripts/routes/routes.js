@@ -21,7 +21,7 @@ const routes = {
   '/contact-us': ContactUs,
   '/login': Login,
   '/signup': SignUp,
-  '/detail-article': DetailArticle,
+  '/detail-article/:id': DetailArticle,
   '/test':Test,
   '/profile' : Profile,
   '/hasil' : Hasil,
