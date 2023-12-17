@@ -13,7 +13,7 @@ const Test = {
         <div id="questionlist"></div>
         <div class="next">
           <div class="next-button">
-            <button id="next-btn" type="submit">Next</button>
+            <button id="next-btn" type="button" disabled>Next</button>
           </div>
         </div>
       </div>
@@ -25,6 +25,12 @@ const Test = {
     const questionContainer = document.querySelector('#questionlist');
     const userAnswers = [];
     let currentQuestion = 0;
+
+    const isAllAnswersFilled = () => {
+      const radioButtons = document.querySelectorAll('input[name="value-radio"]');
+      const answeredQuestions = Array.from(radioButtons).filter(button => button.checked);
+      return answeredQuestions.length === 1; // Ubah menjadi 1 agar satu jawaban yang terpilih
+    };
 
     const updateQuestion = () => {
       if (currentQuestion >= questions.length) {
@@ -41,6 +47,7 @@ const Test = {
       } else {
         const nextQuestion = questionTemplate(questions[currentQuestion]);
         questionContainer.innerHTML = nextQuestion;
+        document.querySelector('#next-btn').disabled = true;
       }
     };
 
@@ -55,22 +62,20 @@ const Test = {
       currentQuestion++;
       updateQuestion();
 
-      if (currentQuestion >= questions.length) {
+      if (currentQuestion < questions.length) {
+        document.querySelector('#next-btn').disabled = true;
+      } else {
         document.querySelector('#next-btn').textContent = 'Finish';
-        document.querySelector('#next-btn').addEventListener('click', () => {
-          const pssScore = calculatePSSScore(userAnswers);
-
-          // Simpan nilai pssScore ke sessionStorage
-          sessionStorage.setItem('pssScore', pssScore);
-
-          // Pindah ke halaman hasil
-          window.location.href = '#/hasil';
-        });
       }
     });
 
     // Pemanggilan pertama untuk menetapkan pertanyaan awal
     updateQuestion();
+
+    // Tambahkan event listener untuk memeriksa jawaban yang diisi
+    document.addEventListener('change', () => {
+      document.querySelector('#next-btn').disabled = !isAllAnswersFilled();
+    });
   },
 };
 

@@ -2,7 +2,7 @@
   padding: 12px;
   display: flex;
   align-items: center;
-  
+ 
 }
 
 /* Styling for the input container */
@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   color: #4299a5;
+  margin-bottom: 200px;
 }
 
 .login-form {
@@ -19,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .input-container h2 {
@@ -69,7 +71,7 @@
 }
 
 .container_img img {
-  width: 70%;
+  width: 50%;
   height: auto;
 }
 
@@ -201,6 +203,7 @@
     padding-left: 1rem;
     flex-direction: column-reverse;
     align-items: center;
+    
   }
 
   .input-label,
@@ -236,3 +239,23 @@
   }
 }
 
+@media screen and (min-width: 901px) and (max-width: 1280px) {
+  .login-container {
+    padding-left: 1rem;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: -190px;
+    margin-left: 150px;
+  }
+  .input-container{
+    padding-top: 200px;
+  }
+  .container_img img {
+    width: 70%;
+    height: auto;
+    
+  }
+
+
+}
