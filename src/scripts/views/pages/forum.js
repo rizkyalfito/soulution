@@ -36,7 +36,7 @@ const Forum = {
         chatProfile.className = 'd-flex align-items-center mb-2';
 
         const profileImage = document.createElement('img');
-        profileImage.src = './images/icons/profile-circle.svg';
+        profileImage.src = './images/profile-circle.svg';
         profileImage.style.width = '44px';
         profileImage.style.height = '44px';
         profileImage.alt = '';

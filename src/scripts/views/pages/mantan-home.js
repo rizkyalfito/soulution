@@ -1,11 +1,11 @@
-import articleSource from "../../../data/source-article";
-import { articleItemTemplate } from "../templates/articleCardTemplate";
+import articleSource from '../../../data/source-article';
+import { articleItemTemplate } from '../templates/articleTemplate';
 
 const Home = {
   async render() {
     return `
     <div class="px-5 pt-4 w-100 Home-hero">
-    <img class="w-100 rounded HomeImg-hero" src="./images/heros/homeHero1.png" height="350px" alt="Hero Home" />
+    <img class="w-100 rounded HomeImg-hero lazyload" data-src="./images/heros/homeHero1.png" height="350px" alt="Hero Home" />
     <p class="fw-bolder articleTagLine-hero">
       Take care of Your <br />
       Mental Health
@@ -29,7 +29,7 @@ const Home = {
     soulutionArticle.forEach((articlePendek) => {
       ArticleContainer.innerHTML += articleItemTemplate(articlePendek);
     });
-},
+  },
 };
 
 export default Home;

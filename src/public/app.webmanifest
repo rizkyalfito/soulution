@@ -1,0 +1,41 @@
+{
+  "start_url": "./index.html",
+  "name": "Soulution",
+  "short_name": "Soulution",
+  "description": "Mental Health",
+  "display": "standalone",
+  "background_color": "#f5f3dc",
+  "theme_color": "#004225",
+  "icons": [
+    {
+      "src": "./icons/mental-health-01.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/mental-health-02.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/mental-health-03.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/mental-health-04.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/mental-health-05.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
