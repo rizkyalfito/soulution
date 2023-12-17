@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
-    "start-dev": "webpack serve --config webpack.dev.js",
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist --port 9007"
   },
@@ -53,7 +53,6 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "regenerator-runtime": "^0.14.0",
-    "socket.io": "^4.7.2",
     "workbox-window": "^7.0.0"
   }
 }

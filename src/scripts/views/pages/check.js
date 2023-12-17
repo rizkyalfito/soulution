@@ -2,24 +2,24 @@
 import axios from 'axios';
 
 const checkSession = async () => {
-    try {
-        const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+  try {
+    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
 
-        if (!response.data.loggedIn) {
-            // Jika pengguna tidak masuk, arahkan mereka ke halaman login
-            alert('You need to login first');
-            window.location.hash = '#/login';
-        }
-    } catch (error) {
-        console.error('Error checking session', error);
+    if (!response.data.loggedIn) {
+      // Jika pengguna tidak masuk, arahkan mereka ke halaman login
+      alert('You need to login first');
+      window.location.hash = '#/login';
     }
+  } catch (error) {
+    console.error('Error checking session', error);
+  }
 };
 
 const Check = {
   async render() {
     return `
     <div class="px-5 pt-4 w-100 hero">
-    <img class="w-100 rounded banner-hero lazyload" data-src="./images/heros/check-hero.png" alt="hero-check">
+    <img class="w-100 rounded banner-hero lazyload" data-src="./images/heros/check-hero.jpeg" alt="hero-check">
     <p class="fw-bolder articleTagLine-hero">
       Take care of Your <br />
       Mental Health
@@ -68,11 +68,10 @@ const Check = {
     // Setelah sesi terverifikasi, tambahkan event listener ke tombol "Get Started"
     const getStartedButton = document.querySelector('.btn.btn-second.btn-lg');
     getStartedButton.addEventListener('click', () => {
-        // Redirect ke halaman test
-        window.location.hash = '#/check';
+      // Redirect ke halaman test
+      window.location.hash = '#/check';
     });
-},
-
+  },
 };
 
 export default Check;

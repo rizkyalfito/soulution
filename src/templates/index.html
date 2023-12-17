@@ -31,7 +31,7 @@
       </div>
       <nav id="navigationDrawer" class="app-bar__navigation">
         <ul>
-          <li><a href="#/home" class="menu-item active">Home</a></li>
+          <li><a href="#/home" class="menu-item">Home</a></li>
           <li><a href="#/check" class="menu-item">Check</a></li>
           <li><a href="#/tips" class="menu-item">Tips</a></li>
           <li><a href="#/forum" class="menu-item">Forum</a></li>
@@ -56,47 +56,30 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const menuItems = document.querySelectorAll('.menu-item');
-
-        menuItems.forEach(function (menuItem) {
-          menuItem.addEventListener('click', function () {
-            menuItems.forEach(function (item) {
-              item.classList.remove('active');
-            });
-
-            menuItem.classList.add('active');
-
-            localStorage.setItem('activePage', menuItem.getAttribute('href'));
-          });
-        });
-             
-              document.querySelector(`.menu-item[href="${activePage}"]`).classList.add("active");
-            }
-
-          });
-
-          document.querySelector(`.menu-item[href="${activePage}"]`).classList.add('active');
-        }
-      });
-      document.addEventListener('DOMContentLoaded', function () {
-        const menuItems = document.querySelectorAll('.menu-item');
-
         const currentURL = window.location.hash;
 
-        if (currentURL) {
+        // Fungsi untuk menangani klik pada menu item
+        function handleMenuItemClick(menuItem) {
           menuItems.forEach(function (item) {
             item.classList.remove('active');
           });
 
-          document.querySelector(`.menu-item[href="${currentURL}"]`).classList.add('active');
+          menuItem.classList.add('active');
+          localStorage.setItem('activePage', menuItem.getAttribute('href'));
         }
 
+        // Atur menu item aktif saat DOM dimuat
+        if (currentURL) {
+          const activeMenuItem = document.querySelector(`.menu-item[href="${currentURL}"]`);
+          if (activeMenuItem) {
+            activeMenuItem.classList.add('active');
+          }
+        }
+
+        // Tambahkan event listener untuk setiap menu item
         menuItems.forEach(function (menuItem) {
           menuItem.addEventListener('click', function () {
-            menuItems.forEach(function (item) {
-              item.classList.remove('active');
-            });
-
-            menuItem.classList.add('active');
+            handleMenuItemClick(menuItem);
           });
         });
       });

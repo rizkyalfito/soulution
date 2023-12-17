@@ -1,6 +1,6 @@
-    const LandingPage = {
-      async render() {
-        return `
+const LandingPage = {
+  async render() {
+    return `
         <div id="landing-page" class="d-flex flex-column justify-content-center">
         <div class="jumbotron">
         <div class="container ">
@@ -118,13 +118,12 @@
           </div>
         </div>
       </div>     
-
-            `;
+      `;
   },
 
-      async afterRender() {
-
-      },
-    };
+  async afterRender() {
+    // render
+  },
+};
 
 export default LandingPage;
