@@ -19,7 +19,7 @@ const Check = {
   async render() {
     return `
     <div class="px-5 pt-4 w-100 hero">
-    <img class="w-100 rounded banner-hero" src="./images/heros/check-hero.png" alt="hero-check">
+    <img class="w-100 rounded banner-hero lazyload" data-src="./images/heros/check-hero.png" alt="hero-check">
     <p class="fw-bolder articleTagLine-hero">
       Take care of Your <br />
       Mental Health
@@ -56,7 +56,7 @@ const Check = {
 
 <div class="w-80 bottom-content">
     <p><b>Ready to check out? Click the button below to get started. It should only take you 5 - 10 minutes to complete.</b></p>
-    <a class="btn btn-second btn-lg" href="#/test" role="button">Get Started </a>
+    <a class="btn btn-second btn-lg" href="#/test" role="button">Get Started ></a>
 </div>
         `;
   },

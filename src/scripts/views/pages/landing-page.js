@@ -1,5 +1,3 @@
-
-    
     const LandingPage = {
       async render() {
         return `
@@ -14,7 +12,7 @@
               <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
             </div>
             <div class="col-md-6">
-              <img src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid">
+              <img data-src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid lazyload">
             </div>
           </div>
         </div>
@@ -122,7 +120,7 @@
       </div>     
 
             `;
-      },
+  },
 
       // eslint-disable-next-line no-empty-function
       async afterRender() {
@@ -130,8 +128,4 @@
       },
     };
 
-    
-
-
-    export default LandingPage;
- 
+export default LandingPage;
