@@ -16,8 +16,21 @@
 .img-hasil img{
     width: 400px;
 }
-.hasil-desk h3{
-    font-weight: bolder;
+.hasil-desk{
     color: #4299A5;
     text-align: center;
+}
+.deskripsi-stress{
+    color: black;
+    width: 80%;
+    text-align: center;
+}
+.desk-stress{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.linked-hasil{
+    text-decoration: none;
+    color: #4299A5;
 }
