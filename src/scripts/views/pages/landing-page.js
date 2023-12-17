@@ -121,9 +121,17 @@ const LandingPage = {
       `;
   },
 
+<<<<<<< HEAD
   async afterRender() {
     // render
   },
 };
+=======
+      // eslint-disable-next-line no-empty-function
+      async afterRender() {
+
+      },
+    };
+>>>>>>> 6e56d6f6da78a561afa846ffc2747609df4e6a44
 
 export default LandingPage;
