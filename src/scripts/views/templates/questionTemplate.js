@@ -1,21 +1,24 @@
 const questionTemplate = (question) => `
-    <div class="questCard">
+  <div class="questCard">
     <div class="py-2 kantong-number">
-        <div class="number"><h3 class="nomor">${question.id}/10</h3></div>
+      <div class="number"><h3 class="nomor">${question.id}/10</h3></div>
     </div>
-        
+
     <h3 class="test-soal">${question.text}</h3>
 
-        <div class="buttonAnswer">
-            <button id="cat1" type="submit" >Never</button>
-            <button id="cat2" type="submit" >Almost Never</button>
-            <button id="cat3" type="submit" >Sometimes</button>
-            <button id="cat4" type="submit" >Fairly Often</button>
-            <button id="cat5" type="submit" >Often</button>
-        </div>
+    <div class="radio-input">
+      <input value="0" name="value-radio" id="value-1" type="radio">
+      <label for="value-1">Never</label>
+      <input value="1" name="value-radio" id="value-2" type="radio">
+      <label for="value-2">Almost Never</label>
+      <input value="2" name="value-radio" id="value-3" type="radio">
+      <label for="value-3">Sometimes</label>
+      <input value="3" name="value-radio" id="value-4" type="radio">
+      <label for="value-4">Fairly Often</label>
+      <input value="4" name="value-radio" id="value-5" type="radio">
+      <label for="value-5">Very Often</label>
     </div>
+  </div>
 `;
 
-
 export default questionTemplate;
-

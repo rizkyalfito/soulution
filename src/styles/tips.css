@@ -30,6 +30,8 @@
   font-size: 27px;
   font-weight: bold;
   padding: 1rem 3rem 0 3rem;
+  margin-left: 35px;
+  
 }
 
 .tips-card {
@@ -162,8 +164,9 @@
   }
 
   .tipsTagLine-hero {
-    font-size: 40px;
+    font-size: 38px;
     padding: 1rem 0 0 1rem;
+    
   }
 
   .tips-card img {
@@ -174,16 +177,22 @@
     font-size: 20px;
     font-weight: bold;
     padding: 1rem 0 1rem 0;
+    text-align: center;
+ 
+    padding-right: 35px;
   }
+    .load-more {
 
-  .load-more {
-    padding-right: 0;
+      align-items: center;
+      justify-content: center; /* Tengahkan kontennya */
+      display: flex; /* Menyusun konten secara flexbox */
   }
-
+  
   .load-more button {
     margin-top: 1rem;
+    align-items: center;
   }
-
+  
   .detailTips-container img {
     width: 100%;
   }

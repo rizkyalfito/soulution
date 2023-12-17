@@ -14,9 +14,12 @@
 .overlay{
     padding: 2rem 0 1rem 3rem;
     padding-left: 400px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
 }
 .new-title{
-    width: 450px;
+    width: 100%;
     height: 50px;
     background-color: #4299a5;
     border-radius: 10px;
@@ -28,10 +31,13 @@
     padding-left: 30px;
     font-size: 100px;
     text-align: center;
+    justify-content: center;
+    
 }
 .para1{
     text-align: center;
     color: #4299A5;
+    text-align: justify;
 }
 .para2{
     text-align: justify;
@@ -51,7 +57,10 @@
     background-color:#4299A5;
     padding: 3rem;
     color: white;
+    text-align: center;
 }
+
+
 .bottom-content p{
     padding-bottom: 3rem;
 }
@@ -62,4 +71,43 @@
     background-color: #f0f0f0;
     border: none; 
     margin: 0 auto;
+}
+/* Media Query for Small Screens (max-width: 768px) */
+@media only screen and (max-width: 1204px) {
+    .overlay {
+        display: flex;
+        flex-direction: column; /* Change to a column layout on small screens */
+        align-items: center;
+        padding-left: 0; /* Remove left padding on small screens */
+    }
+
+    .new-title {
+        width: 100%;
+        max-width: none; /* Remove maximum width on small screens */
+        text-align: center; /* Center the text */
+        margin: 0; /* Remove any margin */
+        justify-content: center;
+    }
+
+    .articleTagLine-hero {
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-right: 100px;
+        padding-bottom: 40px;
+    }
+
+    .bottom-content .btn-second  {
+        padding: 10px 20px;
+        font-size: 16px;
+      width: 100%;
+      height: 100%;
+        margin: auto;
+    }
+    .para1{
+        text-align: justify;
+    }
 }

@@ -1,0 +1,29 @@
+{
+    "Score": [
+        {
+            "id":"1",
+            "kondisi":"never",
+            "nilai":"0"
+        },
+        {
+            "id":"2",
+            "kondisi":"Almost Never",
+            "nilai":"1"
+        },
+        {
+            "id":"3",
+            "kondisi":"Sometimes",
+            "nilai":"2"
+        },
+        {
+            "id":"4",
+            "kondisi":"Fairly Often",
+            "nilai":"3"
+        },
+        {
+            "id":"5",
+            "kondisi":"Often",
+            "nilai":"4"
+        }
+    ]
+}

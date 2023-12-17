@@ -1,21 +1,6 @@
-// Fungsi ini didefinisikan di luar objek LandingPage
-function handleButtonClick(target) {
-  // Menghapus kelas 'active' dari semua tombol
-  document.querySelectorAll('.menu-button').forEach((button) => button.classList.remove('active'));
-
-  // Menambahkan kelas 'active' pada tombol yang diklik
-  const activeButton = document.querySelector(`.menu-button[data-target="${target}"]`);
-  if (activeButton) {
-    activeButton.classList.add('active');
-  }
-
-  // Mengarahkan ke target halaman
-  window.location.href = target;
-}
-
-const LandingPage = {
-  async render() {
-    return `
+    const LandingPage = {
+      async render() {
+        return `
         <div id="landing-page" class="d-flex flex-column justify-content-center">
         <div class="jumbotron">
         <div class="container ">
@@ -42,7 +27,7 @@ const LandingPage = {
                         <div class="card-body mt-3">
                             <h5 class="card-title">Check</h5>
                             <p class="card-text" style="text-align: justify;">Find out how much stress you're under by answering some psychology questions that can measure your stress levels.</p>
-                            <button class="cssbuttons-io-button menu-button"  data-target="#/check">
+                            <button class="cssbuttons-io-button" onclick="window.location.href='#/check'">
                               Let's try
                               <div class="icon">
                                 <svg
@@ -70,7 +55,7 @@ const LandingPage = {
                         <div class="card-body mt-5">
                             <h5 class="card-title">Tips</h5>
                             <p class="card-text" style="text-align: justify;">Relieve your stress by reading articles on tips for relieving stress for short or long periods of time.</p>
-                            <button class="cssbuttons-io-button mt-4 menu-button"  data-target="#/tips">
+                            <button class="cssbuttons-io-button" onclick="window.location.href='#/tips'">
                               Let's read
                               <div class="icon">
                                 <svg
@@ -97,7 +82,7 @@ const LandingPage = {
                         <div class="card-body mt-4">
                             <h5 class="card-title">Forum</h5>
                             <p class="card-text mb-5" style="text-align: justify;">Tell us about your experiences with stress or how you deal with stress and become a helper for many people.</p>
-                            <button class="cssbuttons-io-button menu-button"  data-target="#/forum">
+                            <button class="cssbuttons-io-button" onclick="window.location.href='#/forum'">
                               Let's talk
                               <div class="icon">
                                 <svg
@@ -132,26 +117,14 @@ const LandingPage = {
             </div>
           </div>
         </div>
-      </div>
-
-      
-
-      
+      </div>     
 
             `;
   },
 
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-    const buttons = document.querySelectorAll('.menu-button');
+      async afterRender() {
 
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
-        handleButtonClick(target);
-      });
-    });
-  },
-};
+      },
+    };
 
 export default LandingPage;

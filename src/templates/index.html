@@ -68,11 +68,10 @@
             localStorage.setItem('activePage', menuItem.getAttribute('href'));
           });
         });
+             
+              document.querySelector(`.menu-item[href="${activePage}"]`).classList.add("active");
+            }
 
-        const activePage = localStorage.getItem('activePage');
-        if (activePage) {
-          menuItems.forEach(function (item) {
-            item.classList.remove('active');
           });
 
           document.querySelector(`.menu-item[href="${activePage}"]`).classList.add('active');

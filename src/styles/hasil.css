@@ -1,0 +1,71 @@
+.hasil-up {
+    height: 130px;
+    background-color: #4299A5;
+    text-align: center;
+}
+
+.hasil-up h2 {
+    padding: 3rem;
+    color: white;
+}
+
+.img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img-hasil img {
+    width: 100%; /* Mengisi lebar container */
+    max-width: 400px; /* Batasi lebar maksimal gambar */
+    height: auto; /* Sesuaikan tinggi proporsional */
+}
+
+.hasil-desk {
+    color: #4299A5;
+    text-align: center;
+}
+
+.deskripsi-stress {
+    color: black;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto; /* Pusatkan pada layar kecil */
+}
+
+.desk-stress {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    flex-wrap: wrap; /* Biarkan elemen pada layar kecil meluncur ke bawah */
+}
+
+.linked-hasil {
+    text-decoration: none;
+    color: white;
+    display: block; /* Biarkan tautan mengisi lebar */
+    margin: 10px auto; /* Pusatkan pada layar kecil */
+    background-color: #4299A5;
+    border-radius: 10px;
+    width: 120px;
+    height: 25px;
+    text-decoration: none;
+}
+.linked-hasil:hover{
+    text-decoration: none;
+    color:black;
+}
+
+@media (max-width: 576px) {
+    .hasil-up {
+        font-size: 12px;
+    }
+
+    .hasil-up h2 {
+        padding: 1rem; /* Kurangi padding pada layar kecil */
+    }
+    .deskripsi-stress{
+        text-align: justify;
+    }
+}

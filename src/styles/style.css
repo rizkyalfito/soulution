@@ -8,6 +8,7 @@
 @import url('./check.css');
 @import url('./test.css');
 @import url('./profile.css');
+@import url('./hasil.css');
 
 * {
   padding: 0;
@@ -63,7 +64,7 @@ h1 {
   background-color: transparent;
   border: none;
   font-size: 18px;
-  padding: 8px;
+  padding: 0px;
   cursor: pointer;
   color: black;
 }
@@ -122,16 +123,20 @@ h1 {
   border-bottom: 0.2rem solid #4fc0d0;
   transform: scaleX(0);
   transition: 0.2s linear;
+  padding-top: 10px;
 }
 
 .app-bar .app-bar__navigation ul li a:hover::after {
   transform: scaleX(0.5);
+  
 }
 
 .app-bar .app-bar__navigation ul li a.active {
   color: white;
   background-color: #4fc0d0;
-  border-radius: 8px;
+  border-radius: 10px;
+  width: 110px;
+  height: 40px;
 }
 
 .app-bar .app-bar__navigation ul li {
