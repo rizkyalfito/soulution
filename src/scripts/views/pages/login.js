@@ -3,26 +3,27 @@
 import axios from 'axios';
 
 const checkSession = async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
-    console.log(response.data);
+    try {
+        const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+        console.log(response.data);
 
-    // Update status atau lakukan tindakan berdasarkan respons sesi di sini
-    if (response.data.loggedIn) {
-      // Pengguna masuk, lakukan sesuatu
-      console.log('User is logged in:', response.data.user);
-    } else {
-      // Pengguna tidak masuk, lakukan sesuatu
-      console.log('User is not logged in');
+        // Update status atau lakukan tindakan berdasarkan respons sesi di sini
+        if (response.data.loggedIn) {
+            // Pengguna masuk, lakukan sesuatu
+            console.log('User is logged in:', response.data.user);
+        } else {
+            // Pengguna tidak masuk, lakukan sesuatu
+            console.log('User is not logged in');
+        }
+    } catch (error) {
+        console.error('Error checking session', error);
     }
-  } catch (error) {
-    console.error('Error checking session', error);
-  }
 };
 
+
 const Login = {
-  async render() {
-    return `
+    async render() {
+        return `
             <div class="login-container">
                 <div class="input-container">
                     <h2>Log In</h2>
@@ -41,47 +42,32 @@ const Login = {
                     </form>
                 </div>
                 <div class="container_img">
-                    <img data-src="./images/heros/login3.jpg" class="gambar lazyload"  alt="LogIn"/>
+                    <img src="./images/heros/login3.jpg" class="gambar"  alt="LogIn"/>
                 </div>
             </div>
         `;
-  },
+    },
+  
+    async afterRender() {
+        const loginForm = document.getElementById('login-form');
+        const loginButton = document.getElementById('login-btn');
+        const loadingIndicator = document.getElementById('loading-indicator');
 
-  async afterRender() {
-    const loginForm = document.getElementById('login-form');
-    const loginButton = document.getElementById('login-btn');
-    const loadingIndicator = document.getElementById('loading-indicator');
+        loginForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
 
-    loginForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
 
-      const emailInput = document.getElementById('email');
-      const passwordInput = document.getElementById('password');
+            // Validasi sederhana
+            if (!emailInput.value || !passwordInput.value) {
+                alert('Email and password are required');
+                return;
+            }
 
-      // Validasi sederhana
-      if (!emailInput.value || !passwordInput.value) {
-        alert('Email and password are required');
-        return;
-      }
+            loginButton.style.display = 'none';
+            loadingIndicator.style.display = 'block';
 
-      loginButton.style.display = 'none';
-      loadingIndicator.style.display = 'block';
-
-      try {
-        const response = await axios.post(
-          'http://localhost:3000/api/auth/login',
-          {
-            email: emailInput.value,
-            password: passwordInput.value,
-          },
-          { withCredentials: true }
-        );
-
-        // Simulasikan delay 2 detik (2000 milidetik)
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-
-        if (response.status === 200) {
-          console.log('Login successful');
             try {
                 const response = await axios.post('http://localhost:3000/api/auth/login', {
                     email: emailInput.value,
