@@ -3,27 +3,26 @@
 import axios from 'axios';
 
 const checkSession = async () => {
-    try {
-        const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
-        console.log(response.data);
+  try {
+    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+    console.log(response.data);
 
-        // Update status atau lakukan tindakan berdasarkan respons sesi di sini
-        if (response.data.loggedIn) {
-            // Pengguna masuk, lakukan sesuatu
-            console.log('User is logged in:', response.data.user);
-        } else {
-            // Pengguna tidak masuk, lakukan sesuatu
-            console.log('User is not logged in');
-        }
-    } catch (error) {
-        console.error('Error checking session', error);
+    // Update status atau lakukan tindakan berdasarkan respons sesi di sini
+    if (response.data.loggedIn) {
+      // Pengguna masuk, lakukan sesuatu
+      console.log('User is logged in:', response.data.user);
+    } else {
+      // Pengguna tidak masuk, lakukan sesuatu
+      console.log('User is not logged in');
     }
+  } catch (error) {
+    console.error('Error checking session', error);
+  }
 };
 
-
 const Login = {
-    async render() {
-        return `
+  async render() {
+    return `
             <div class="login-container">
                 <div class="input-container">
                     <h2>Log In</h2>
@@ -46,25 +45,25 @@ const Login = {
                 </div>
             </div>
         `;
-    },
-  
-    async afterRender() {
-        const loginForm = document.getElementById('login-form');
-        const loginButton = document.getElementById('login-btn');
-        const loadingIndicator = document.getElementById('loading-indicator');
+  },
 
-        loginForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
+  async afterRender() {
+    const loginForm = document.getElementById('login-form');
+    const loginButton = document.getElementById('login-btn');
+    const loadingIndicator = document.getElementById('loading-indicator');
 
-            const emailInput = document.getElementById('email');
-            const passwordInput = document.getElementById('password');
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-            // Validasi sederhana
-            if (!emailInput.value || !passwordInput.value) {
-                alert('Email and password are required');
-                return;
-            }
-            
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+
+      // Validasi sederhana
+      if (!emailInput.value || !passwordInput.value) {
+        alert('Email and password are required');
+        return;
+      }
+
       loginButton.style.display = 'none';
       loadingIndicator.style.display = 'block';
 
@@ -107,7 +106,6 @@ const Login = {
       }
     });
   },
-
 };
 
 export default Login;

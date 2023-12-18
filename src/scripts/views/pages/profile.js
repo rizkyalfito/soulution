@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import axios from "axios";
+import axios from 'axios';
 
 const Profile = {
   async render() {
@@ -20,22 +20,21 @@ const Profile = {
 
   async afterRender() {
     document.getElementById('saveButton').addEventListener('click', () => {
-        this.saveName();
+      this.saveName();
     });
 
     document.getElementById('tombol-logout').addEventListener('click', async () => {
-        const isConfirmed = window.confirm('Are you sure you want to log out?');
+      const isConfirmed = window.confirm('Are you sure you want to log out?');
 
-        if (isConfirmed) {
-            await this.logout();
-        }
+      if (isConfirmed) {
+        await this.logout();
+      }
     });
-},
-
+  },
 
   async getUserProfile() {
     try {
-      const response = await axios.get('http://localhost:3000/api/auth/check-session',{ withCredentials: true });
+      const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
       if (response.data.loggedIn) {
         return response.data.user;
       }
@@ -49,7 +48,8 @@ const Profile = {
     const newName = document.getElementById('newName').value;
 
     // Kirim permintaan ke server untuk menyimpan perubahan nama
-    axios.post('http://localhost:3000/api/profile/update-username', { username: newName }, { withCredentials: true })
+    axios
+      .post('http://localhost:3000/api/profile/update-username', { username: newName }, { withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Username updated') {
           alert('Username updated successfully');
@@ -64,14 +64,14 @@ const Profile = {
         // Tambahkan penanganan kesalahan di sini
         alert('Error during username update. You need to login first');
       });
-},
-
+  },
 
   logout() {
-    axios.get('http://localhost:3000/api/auth/logout',{ withCredentials: true })
+    axios
+      .get('http://localhost:3000/api/auth/logout', { withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Logout successful') {
-          window.location.hash = '#/home'; 
+          window.location.hash = '#/home';
         } else {
           console.error('Logout failed');
         }

@@ -12,21 +12,25 @@ const PORT = 3000;
 app.use(express.json());
 
 // Middleware for CORS
-app.use(cors({ 
+app.use(
+  cors({
     origin: 'http://localhost:9007', // Sesuaikan dengan alamat URL aplikasi frontend Anda
     credentials: true, // Izinkan pengiriman kredensial (contohnya session cookie)
-}));
+  })
+);
 
 // Middleware for session
-app.use(session({
+app.use(
+  session({
     secret: 'KisameHada21', // Ganti dengan kunci rahasia yang kuat
     resave: false,
     saveUninitialized: true,
-    cookie: { 
+    cookie: {
       secure: false,
-      httpOnly: true      
-     }
-}));
+      httpOnly: true,
+    },
+  })
+);
 
 const profileRoutes = require('./routes/profile');
 
@@ -44,5 +48,3 @@ app.use('/api', routes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-

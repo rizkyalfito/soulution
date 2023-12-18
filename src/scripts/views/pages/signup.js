@@ -35,7 +35,7 @@ const SignUp = {
           </form>
         </div>
         <div class="container_img">
-          <img data-src="./images/heros/login3.jpg" class="gambar lazyload" width="500px" height="450px" alt="LogIn"/>
+          <img src="./images/heros/login3.jpg" class="gambar" width="500px" height="450px" alt="LogIn"/>
         </div>
       </div>
     `;
