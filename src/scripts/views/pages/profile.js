@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import axios from "axios";
+import axios from 'axios';
 
 const Profile = {
   async render() {
@@ -20,18 +20,17 @@ const Profile = {
 
   async afterRender() {
     document.getElementById('saveButton').addEventListener('click', () => {
-        this.saveName();
+      this.saveName();
     });
 
     document.getElementById('tombol-logout').addEventListener('click', async () => {
-        const isConfirmed = window.confirm('Are you sure you want to log out?');
+      const isConfirmed = window.confirm('Are you sure you want to log out?');
 
-        if (isConfirmed) {
-            await this.logout();
-        }
+      if (isConfirmed) {
+        await this.logout();
+      }
     });
-},
-
+  },
 
   async getUserProfile() {
     try {
@@ -64,14 +63,13 @@ const Profile = {
         // Tambahkan penanganan kesalahan di sini
         alert('Error during username update. You need to login first');
       });
-},
-
+  },
 
   logout() {
     axios.get('http://192.168.0.109:3000/api/auth/logout',{ withCredentials: true })
       .then((response) => {
         if (response.data.message === 'Logout successful') {
-          window.location.hash = '#/home'; 
+          window.location.hash = '#/home';
         } else {
           console.error('Logout failed');
         }

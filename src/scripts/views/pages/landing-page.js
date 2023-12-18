@@ -12,7 +12,7 @@ const LandingPage = {
               <a class="btn btn-primary btn-lg" href="#/check" role="button">Get Started</a>
             </div>
             <div class="col-md-6">
-              <img data-src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid lazyload">
+              <img src="./images/heros/hero.jpg" alt="Hero Image" class="img-fluid">
             </div>
           </div>
         </div>

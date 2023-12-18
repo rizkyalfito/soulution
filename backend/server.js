@@ -15,18 +15,21 @@ app.use(express.json());
 app.use(cors({ 
     origin: 'http://192.168.0.109:9007', // Sesuaikan dengan alamat URL aplikasi frontend Anda
     credentials: true, // Izinkan pengiriman kredensial (contohnya session cookie)
-}));
+  })
+);
 
 // Middleware for session
-app.use(session({
+app.use(
+  session({
     secret: 'KisameHada21', // Ganti dengan kunci rahasia yang kuat
     resave: false,
     saveUninitialized: true,
-    cookie: { 
+    cookie: {
       secure: false,
-      httpOnly: true      
-     }
-}));
+      httpOnly: true,
+    },
+  })
+);
 
 const profileRoutes = require('./routes/profile');
 
@@ -44,5 +47,3 @@ app.use('/api', routes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-

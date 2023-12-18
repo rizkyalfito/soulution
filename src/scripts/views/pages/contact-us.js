@@ -7,7 +7,7 @@ const ContactUs = {
     <div class="contact-container">
 
       <div class="px-5 pt-4 w-100 contact-hero">
-        <img class="w-100 rounded contact-hero-img lazyload" data-src="./images/heros/contact-hero.jpeg" height="350px" alt="Hero Home" />
+        <img class="w-100 rounded contact-hero-img" src="./images/heros/contact-hero.jpeg" height="350px" alt="Hero Home" />
       </div>
       
       <h2 class="py-2 rounded-1 text-light text-center">Our Team</h2>

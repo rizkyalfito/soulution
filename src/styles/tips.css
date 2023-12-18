@@ -1,6 +1,6 @@
 .tips-hero {
   width: 100%;
-  padding: 1rem 5rem 0 5rem;
+  padding: 2rem 5rem 0 5rem;
 }
 
 .tipsTagLine-hero {
@@ -31,7 +31,6 @@
   font-weight: bold;
   padding: 1rem 3rem 0 3rem;
   margin-left: 35px;
-  
 }
 
 .tips-card {
@@ -130,7 +129,7 @@
   }
 
   .tips-hero {
-    padding: 0;
+    padding: 2rem 0 0 0;
   }
 
   .tipsTagLine-hero {
@@ -166,7 +165,6 @@
   .tipsTagLine-hero {
     font-size: 38px;
     padding: 1rem 0 0 1rem;
-    
   }
 
   .tips-card img {
@@ -178,21 +176,20 @@
     font-weight: bold;
     padding: 1rem 0 1rem 0;
     text-align: center;
- 
     padding-right: 35px;
   }
-    .load-more {
 
-      align-items: center;
-      justify-content: center; /* Tengahkan kontennya */
-      display: flex; /* Menyusun konten secara flexbox */
+  .load-more {
+    align-items: center;
+    justify-content: center; /* Tengahkan kontennya */
+    display: flex; /* Menyusun konten secara flexbox */
   }
-  
+
   .load-more button {
     margin-top: 1rem;
     align-items: center;
   }
-  
+
   .detailTips-container img {
     width: 100%;
   }

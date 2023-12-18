@@ -22,15 +22,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="app-bar">
-      <div class="app-bar__menu">
-        <button id="hamburgerButton">☰</button>
-      </div>
-      <div class="app-bar__brand">
-        <a href="#/home"><h1>Soulution</h1></a>
-      </div>
-      <nav id="navigationDrawer" class="app-bar__navigation">
-        <ul>
+    <header>
+      <nav class="app-bar__navigation">
+        <button id="hamburgerButton" class="burger">&#9776;</button>
+        <a href="#/home" class="app-bar__brand"><h1>Soulution</h1></a>
+        <ul id="navigationDrawer">
           <li><a href="#/home" class="menu-item">Home</a></li>
           <li><a href="#/check" class="menu-item">Check</a></li>
           <li><a href="#/tips" class="menu-item">Tips</a></li>
