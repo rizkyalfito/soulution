@@ -12,9 +12,8 @@ const PORT = 3000;
 app.use(express.json());
 
 // Middleware for CORS
-app.use(
-  cors({
-    origin: 'http://localhost:9007', // Sesuaikan dengan alamat URL aplikasi frontend Anda
+app.use(cors({ 
+    origin: 'http://192.168.0.109:9007', // Sesuaikan dengan alamat URL aplikasi frontend Anda
     credentials: true, // Izinkan pengiriman kredensial (contohnya session cookie)
   })
 );

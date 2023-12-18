@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const checkSession = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
+    const response = await axios.get('http://192.168.0.109:3000/api/auth/check-session', { withCredentials: true });
     console.log(response.data);
 
     // Lakukan sesuatu berdasarkan respons sesi di sini
@@ -64,7 +64,7 @@ const SignUp = {
 
       try {
         const response = await axios.post(
-          'http://localhost:3000/api/auth/signup',
+          'http://192.168.0.109:3000/api/auth/signup',
           {
             email: emailInput.value,
             password: passwordInput.value,

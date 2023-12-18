@@ -3,10 +3,9 @@
 import axios from 'axios';
 
 const checkSession = async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/api/auth/check-session', { withCredentials: true });
-    console.log(response.data);
-
+    try {
+        const response = await axios.get('http://192.168.0.109:3000/api/auth/check-session', { withCredentials: true });
+        console.log(response.data);
     // Update status atau lakukan tindakan berdasarkan respons sesi di sini
     if (response.data.loggedIn) {
       // Pengguna masuk, lakukan sesuatu
@@ -63,49 +62,45 @@ const Login = {
         alert('Email and password are required');
         return;
       }
+            loginButton.style.display = 'none';
+            loadingIndicator.style.display = 'block';
 
-      loginButton.style.display = 'none';
-      loadingIndicator.style.display = 'block';
-
-      try {
-        const response = await axios.post(
-          'http://localhost:3000/api/auth/login',
-          {
-            email: emailInput.value,
-            password: passwordInput.value,
-          },
-          { withCredentials: true }
-        );
-
-        // Simulasikan delay 2 detik (2000 milidetik)
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-
-        if (response.status === 200) {
-          console.log('Login successful');
-
-          // Pastikan pemanggilan checkSession setelah selesai proses login
-          await checkSession();
-
-          // Pastikan tidak ada navigasi sebelum checkSession selesai
-          window.location.hash = '#/check';
-        } else {
-          console.error('Login failed');
-          alert('Login failed. Please check your email and password.');
-        }
-      } catch (error) {
-        console.error('Error during login', error);
-
-        if (error.response && error.response.status === 401) {
-          alert('Invalid email or password. Please try again.');
-        } else {
-          alert('Error during login. Please try again later.');
-        }
-      } finally {
-        loginButton.style.display = 'block';
-        loadingIndicator.style.display = 'none';
-      }
-    });
-  },
+            try {
+                const response = await axios.post('http://192.168.0.109:3000/api/auth/login', {
+                    email: emailInput.value,
+                    password: passwordInput.value,
+                }, { withCredentials: true });
+            
+                // Simulasikan delay 2 detik (2000 milidetik)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+            
+                if (response.status === 200) {
+                    console.log('Login successful');
+            
+                    // Pastikan pemanggilan checkSession setelah selesai proses login
+                    await checkSession();
+            
+                    // Pastikan tidak ada navigasi sebelum checkSession selesai
+                    window.location.hash = '#/check';
+                } else {
+                    console.error('Login failed');
+                    alert('Login failed. Please check your email and password.');
+                }
+            } catch (error) {
+                console.error('Error during login', error);
+            
+                if (error.response && error.response.status === 401) {
+                    alert('Invalid email or password. Please try again.');
+                } else {
+                    alert('Error during login. Please try again later.');
+                }
+            } finally {
+                loginButton.style.display = 'block';
+                loadingIndicator.style.display = 'none';
+            }
+                     
+        });
+    },
 };
 
 export default Login;
